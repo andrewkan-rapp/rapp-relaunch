@@ -88,7 +88,6 @@
         }
 
         /* Change mobile OS links to match style, keep outside of media query for tablets */
-
         .unlink_text a:link,
         .unlink_text a:visited,
         .unlink_text a:hover,
@@ -109,7 +108,6 @@
         }
 
         /* Outlook.com Image Fix */
-
         [owa] div,
         button {
             margin: 0 !important;
@@ -128,7 +126,6 @@
         }
 
         /* Styles specific for which device the user is on */
-
         .mobile {
             display: none !important;
         }
@@ -141,7 +138,6 @@
             width: auto !important;
             max-height: inherit !important;
         }
-
         /* END Styles specific for which device the user is on */
 
         /*  
@@ -149,7 +145,6 @@
                 Fallbacks are in place
                 This is for all devices
          */
-
         @media screen {
 
             @font-face{
@@ -194,7 +189,6 @@
                 font-weight: normal;
             }
         }
-
         /* END Custom Fonts */
 
         /***************************************************
@@ -202,6 +196,7 @@
             GLOBAL STYLES
                 Desktop First Method
                 Add your desktop styling here!
+                Author styles
         ****************************************************
         ***************************************************/
 
@@ -264,6 +259,7 @@
                 Add your mobile styling here!
                 Override the desktop styles
                 This is an adaptive layout, so the layout changes to 320px width
+                Author styles
         ****************************************************
         ***************************************************/
 
@@ -298,7 +294,6 @@
                 width: 320px;
             }
 
-            /* HEADER */
             .preheader_links_wrap {
                 line-height: 100% !important;
             }
@@ -314,7 +309,6 @@
             .hero-img {
                 width: 100%;
             }
-
             /* END Resets */
 
             /* Author Styles */
@@ -337,7 +331,6 @@
             /* END Author Styles */
         }
     </style>
-
     <!--
         Outlook Styling
             Loads these styles only if the user is using an Outlook email client
@@ -376,6 +369,7 @@
         /* END Reset */
 
         /* Created class to limit the height because Outlook rendered a larger height */
+        /* Author Styles */
         .height-o {
             font-size: 1px !important;
             height: 1px !important;
@@ -489,6 +483,7 @@
                                 <tr>
                                     <td align="center">
                                         <table width="100%" cellpadding="0" cellspacing="0" border="0" class="full_width">
+                                            <!-- Two column layout -->
                                             <tr>
                                                 <td>
                                                     <!--[if (gte mso 9)|(IE)]>
@@ -524,6 +519,7 @@
                                                     <![endif]-->
                                                 </td>
                                             </tr>
+                                            <!-- END Two column layout -->
                                         </table>
                                     </td>
                                 </tr>
