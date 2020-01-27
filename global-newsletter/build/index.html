@@ -1,0 +1,586 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RAPP - Brand Update</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <style type="text/css">
+        #outlook a {
+            padding: 0;
+        }
+
+        /* Force Outlook to provide a "view in browser" menu link. */
+
+        body {
+            width: 100% !important;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            font-family:'DIN-Regular', 'Roboto', Arial, sans-serif;
+        }
+
+        .ExternalClass {
+            width: 100%;
+        }
+
+        /* Force Hotmail to display emails at full width */
+
+        .ExternalClass,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td,
+        .ExternalClass div {
+            line-height: 100%;
+        }
+
+        .container {
+            margin: 0;
+            padding: 0;
+            width: 100% !important;
+            line-height: 100% !important;
+        }
+
+        /* End reset */
+
+        img {
+            outline: none;
+            text-decoration: none;
+            -ms-interpolation-mode: bicubic;
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        a img {
+            border: none;
+        }
+
+        a:-webkit-any-link {
+            text-decoration: none;
+        }
+
+        table td {
+            border-collapse: collapse;
+        }
+
+        table {
+            border-collapse: collapse;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        .gmailfix {
+            display: none;
+            display: none !important;
+        }
+
+        /* Change mobile OS links to match style, keep outside of media query for tablets */
+
+        .unlink_text a:link,
+        .unlink_text a:visited,
+        .unlink_text a:hover,
+        .unlink_text a:focus,
+        .unlink_text a:active {
+            color: #000000 !important;
+            text-decoration: none !important;
+        }
+
+        .unlink_footer a {
+            color: #777777 !important;
+            text-decoration: none !important;
+        }
+
+        .preview_text a {
+            color: #ffffff !important;
+            text-decoration: none !important;
+        }
+
+        /* Outlook.com Image Fix */
+
+        [owa] div,
+        button {
+            margin: 0 !important;
+            padding: 0 !important;
+            display: block !important;
+        }
+
+        .mobile {
+            display: none !important;
+        }
+
+        .desktop {
+            display: block !important;
+            margin: 0;
+            padding: 0;
+            overflow: visible !important;
+            width: auto !important;
+            max-height: inherit !important;
+        }
+
+        /* Custom Font */
+        @media screen {
+
+            @font-face{
+                font-family:'DIN-Bold';
+                src:url('https://holiday.rapp.com/css/fonts/DINWebPro-Bold.eot?1555633958');
+                src:url('https://holiday.rapp.com/css/fonts/DINWebPro-Bold.eot?&1555633958#iefix') format('embedded-opentype'),
+                url('https://holiday.rapp.com/css/fonts/DINWebPro-Bold.woff?1555633958') format('woff'),url('https://holiday.rapp.com/css/fonts/DINWebPro-Bold.svg?1555633958') format('svg'),
+                url('https://holiday.rapp.com/css/fonts/DINWebPro-Bold.ttf?1555633958') format('truetype')
+            }
+
+            @font-face{
+                font-family:'DIN-Regular';
+                src:url('https://holiday.rapp.com/css/fonts/DINWebPro.eot?1555633958');
+                src:url('https://holiday.rapp.com/css/fonts/DINWebPro.eot?&1555633958#iefix') format('embedded-opentype'),
+                    url('https://holiday.rapp.com/css/fonts/DINWebPro.woff?1555633958') format('woff'),url('https://holiday.rapp.com/css/fonts/DINWebPro.svg?1555633958') format('svg'),
+                    url('https://holiday.rapp.com/css/fonts/DINWebPro.ttf?1555633958') format('truetype')
+            }
+
+            /*Fallbacks*/
+            @font-face {
+                font-family: 'Helvetica-Bold';
+                src: local('Helvetica');
+                font-weight: bold;
+            }
+
+            @font-face {
+                font-family: 'Arial-Bold';
+                src: local('Arial');
+                font-weight: bold;
+            }
+
+            @font-face {
+                font-family: 'Helvetica-Italic';
+                src: local('Helvetica');
+                font-style: italic;
+                font-weight: normal;
+            }
+
+            @font-face {
+                font-family: 'Arial-Italic';
+                src: local('Arial');
+                font-style: italic;
+                font-weight: normal;
+            }
+        }
+
+        .space-divider {
+            font-size: 30px;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .copyright {
+            font-size: 12px;
+        }
+
+        .sub-headline {
+            font-family:'DIN-Bold', 'Roboto', Arial Bold, sans-serif;
+            font-weight: 700;
+            margin: 0;
+            line-height: 27px;
+            margin-bottom: 15px;
+        }
+
+        .emp {
+            font-family:'DIN-Bold', 'Roboto', Arial Bold, sans-serif;
+            font-weight: 700;
+            margin-bottom: 0;
+        }
+
+        table p {
+            line-height: 20px;
+            margin-bottom: 15px;
+        }
+
+        table a:-webkit-any-link {
+            text-decoration: underline;
+            color: #000000;
+        }
+
+        /* Outlook.com */
+        .ecxshow-mso {
+            display: block !important;
+            margin: 0;
+            padding: 0;
+            overflow : visible !important;
+            width: auto !important;
+            max-height: inherit !important;
+        }
+
+        /***************************************************
+****************************************************
+MOBILE TARGETING
+****************************************************
+***************************************************/
+
+        @media screen and (max-width: 599px) {
+
+            /* GENERAL */
+            body {
+                line-height: 100% !important;
+            }
+
+            .full_width {
+                width: 320px !important;
+                min-width: 320px !important;
+            }
+
+            .full_img {
+                width: 320px;
+            }
+
+            /* HEADER */
+            .preheader_links_wrap {
+                line-height: 100% !important;
+            }
+
+            .preheader_links {
+                line-height: inherit !important;
+            }
+
+            /* MISC */
+            .desktop {
+                display: none !important;
+            }
+
+            .mobile {
+                display: block !important;
+                margin: 0;
+                padding: 0;
+                overflow: visible !important;
+                width: auto !important;
+                max-height: inherit !important;
+            }
+
+            .mobile_wrap {
+                white-space: nowrap !important;
+            }
+
+            .hero-img {
+                width: 100%;
+            }
+
+            .left-col {
+                width: 70px;
+            }
+
+            .right-col {
+                width: 237px;
+            }
+
+            .footer-left, .footer-right {
+                width: 100%;
+                text-align: center;
+            }
+
+            .footer-content {
+                margin: auto;
+            }
+
+        }
+
+        /*iPad*/
+
+        @media only screen and (width: 768px) and (height: 1024px) and (orientation: portrait),
+        screen and (height: 768px) and (width: 1024px) and (orientation: landscape) {
+            p {
+                font-family: 'DIN-Regular', 'Roboto', Arial, sans-serif !important;
+            }
+
+            h2,
+            strong.bold {
+                font-family: 'DIN-Bold', 'Roboto', 'Arial-Bold', sans-serif !important;
+                font-weight: 700 !important;
+            }
+
+            em {
+                font-family: 'DIN-Regular', 'Roboto', 'Arial-Italic', sans-serif !important;
+                font-style: normal !important;
+            }
+        }
+
+        /***********************************************
+****************************************************
+END MOBILE TARGETING
+****************************************************
+************************************************/
+    </style>
+    <!--[if gte mso 16]>
+    <style>
+    /* Target Outlook 2010+ */
+    .kbb_text_column_wrap { padding: 30px 15px !important; }
+    </style>
+    <![endif]-->
+
+    <!--[if mso]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]-->
+    <!--[if gte mso 14]>     
+    <style>     
+        /* Target Outlook 2010+ */    
+        p sup {
+            vertical-align: top;
+            position: relative;
+            top: -0.4em;
+            font-size: 80%;
+        }
+        .show-mso {
+            display: block !important;
+            margin: 0;
+            padding: 0;
+            overflow : visible !important;
+            width: auto !important;
+            max-height: inherit !important;
+        }
+        .height-o {
+            font-size: 1px !important;
+            height: 1px !important;
+            line-height: 1px !important;
+        }
+    </style>     
+    <![endif]-->
+
+</head>
+
+<body style="font-family:'DIN-Regular', 'Roboto', Arial, sans-serif;">
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" class="container"
+        style="table-layout:fixed;">
+        <tr>
+            <td align="center">
+                <table width="600" cellpadding="0" cellspacing="0" border="0" class="full_width">
+                    <!-- Header -->
+                    <tr>
+                        <td class="preview_text">
+                            <div style="display:none;"><span
+                                    style="font-family:'DIN-Regular', 'Roboto', Arial, sans-serif;font-size:1px;line-height:1px;color:#ffffff;">Each RAPP USA office wanted to send you a special message</span></div>
+                            <div style="display: none; max-height: 0px; overflow: hidden;">
+                                &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center"
+                            style="vertical-align:middle; mso-line-height-rule:exactly;line-height:38px;">
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0" align="middle"
+                                style="border-collapse:collapse;">
+                                <tr>
+                                    <td align="left"
+                                    style="vertical-align:middle;height:80px;mso-line-height-rule:exactly;margin:0;"
+                                    class="preheader_links_wrap">
+                                        <!-- Desktop Rapp Logo -->
+                                        <a href="https://www.rapp.com" target="_blank" class="desktop" style="text-decoration: none;">
+                                            <img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/4dc130a7-5a8b-42a7-927b-ed17a523e975.jpg" width="167" height="37" alt="RAPP" />
+                                        </a>
+                                        <!-- Mobile Preheader -->
+                                        <!--[if !mso]><!-->
+                                        <div style="display:none;width:0px;max-height:0px;overflow:hidden;" class="mobile">
+                                            <a href="https://www.rapp.com" target="_blank" style="text-decoration: none;">
+                                                <img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/4dc130a7-5a8b-42a7-927b-ed17a523e975.jpg" width="167" height="37" alt="RAPP" />
+                                            </a>
+                                            <br>
+                                        </div>
+                                        <!--<![endif]-->
+                                    </td>
+                                    <td align="right"
+                                        style="vertical-align:middle;height:38px;mso-line-height-rule:exactly;line-height:11px;margin:0;"
+                                        class="preheader_links_wrap"><span
+                                            style="font-family:'DIN-Regular', 'Roboto', Arial, sans-serif;font-size:12px;margin:0;"
+                                            class="preheader_links">
+                                            <!-- Desktop Preheader -->
+                                            <div class="desktop">
+                                                <a href="%%view_email_url%%" alias="webview"
+                                                    target="_blank" style="color:#000000;text-decoration:underline;margin-left: 10px;"><span
+                                                        style="color:#000000;text-decoration:underline;"><strong style="font-weight: normal;">View as a Web page</strong></span></a>
+                                            </div>
+                                            <!-- Mobile Preheader -->
+                                            <!--[if !mso]><!-->
+                                            <div style="display:none;width:0px;max-height:0px;overflow:hidden;" class="mobile"><a href="%%view_email_url%%" alias="webview"
+                                                    target="_blank" style="color:#000000;text-decoration:underline;display:block;"><strong style="font-weight: normal;">View as a Web page</strong></a><br></div>
+                                            <!--<![endif]-->
+                                        </span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- Main -->
+                    <tr>
+                        <td align="center">
+                            <table cellpadding="0" cellspacing="0" border="0" class="full_width">
+                                <!-- Content -->
+                                <tr style="font-size: 10px !important; height: 10px !important; line-height: 10px !important;">
+                                    <td align="center" class="space-divider" style="font-size: 10px !important; height: 10px !important; line-height: 10px !important;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/aa4f737e-8094-4cdc-af8e-90348c937e62.png" width="600" alt="Brand Update" class="hero-img" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" class="space-divider" style="font-size: 20px; height: 20px !important; line-height: 20px !important;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <!-- Hero Content -->
+                                <tr>
+                                    <td align="center">
+                                        <table width="100%" cellpadding="0" cellspacing="0" border="0" class="full_width">
+                                            <tr>
+                                                <td>
+                                                    <!--[if (gte mso 9)|(IE)]>
+                                                    <table width="600" align="center">
+                                                        <tr>
+                                                        <td width="300">
+                                                        <![endif]-->
+                                                    <table align="left" width="150" cellpadding="0" cellspacing="0" border="0" class="left-col">
+                                                        <tr>
+                                                            <td>
+                                                                <img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/a520f097-2820-4a0f-80f5-69be7c5ecc2c.jpg" width="130" class="hero-img" />
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <!--[if (gte mso 9)|(IE)]>
+                                                    </td>
+                                                    <td width="300">
+                                                    <![endif]-->
+                                                    <table align="right" width="450" cellpadding="0" cellspacing="0" border="0" class="right-col">
+                                                        <tr>
+                                                            <td>
+                                                                <p class="emp">Dear %%FirstName%%,</p>
+                                                                <p>Thank you for taking time out of your busy schedule to join yesterday's webinar sessions and hear about how we're refreshing the RAPP brand for 2020, and beyond. I hope you're as excited about this evolution as I am – it's evidence of the modern, cutting-edge direction in which our agency is headed, while speaking to our heritage, core values and strengths. Cheers to the successes ahead!</p>
+                                                                <p class="emp">Be Fearless, Always!</p>
+                                                                <img class="signature" src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/b4a504a3-4fd4-4d84-98e6-60113564e1ea.jpg" width="120" />
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <!--[if (gte mso 9)|(IE)]>
+                                                    </td>
+                                                    </tr>
+                                                    </table>
+                                                    <![endif]-->
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- END Hero Content -->
+                                <tr>
+                                    <td align="center" class="space-divider" style="font-size: 30px !important; height: 30px !important; line-height: 30px !important;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left">
+                                        <h2 class="sub-headline">OUR NEW BRAND ASSETS AND FEARLESS TESTIMONIALS ARE READY FOR YOU!</h2>
+                                        <p>
+                                            You can now access our new presentation templates, asset library, brand guidelines, business card templates, and much more, on <a href="https://rappagency.imeetcentral.com/coredialogbrandassetrepository/folder/WzIwLDU5NDk4NTNd" target="_blank" alias="" style="color: #000000">RDV here</a>. Don’t forget to <a href="https://rappagency.imeetcentral.com/coredialogbrandassetrepository/folder/WzIwLDEyNTQ3ODU4XQ/" target="_blank" alias="" style="color: #000000">download</a> our condensed DIN font variation, as well! And, please, use this new system, moving forward, for all RAPP content and collateral!
+                                        </p>
+                                        <p>
+                                            Also, as mentioned during our session, we would love to hear about how you, or your colleagues, acted fearlessly! Help us bring our Fearless value to life, by taking the time to <a href="https://docs.google.com/forms/d/e/1FAIpQLScwuy5124MjmN2y3L3eZrgQdcWGMXHQlXAD_eDObKHR1DugJA/viewform" target="_blank" alias="" style="color: #000000">fill out our survey form</a>, to share your story and be featured in our video testimonial library! And keep your eyes peeled for new videos, training materials and updates on how we’ll be working to embody our Fearless values every day, here, at RAPP.
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" class="space-divider"  style="font-size: 20px !important; height: 20px !important; line-height: 20px !important;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" class="space-divider height-o"  style="font-size: 5px; height: 5px; line-height: 5px; background-color: #ff6500;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #eeeeee;" class="full_width">
+                                            <tr>
+                                                <td align="center" class="space-divider"  style="font-size: 15px !important; height: 15px !important; line-height: 15px !important;">
+                                                    &nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <!--[if (gte mso 9)|(IE)]>
+                                                    <table width="600" align="center">
+                                                        <tr>
+                                                        <td width="300">
+                                                        <![endif]-->
+                                                    <table align="left" width="300" cellpadding="10" cellspacing="0" border="0" class="footer-left">
+                                                        <tr>
+                                                            <td>
+                                                                <a href="https://www.rapp.com" target="_blank" style="text-decoration: none;">
+                                                                    <img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/926a9291-a5dd-41b3-b8fd-5e38efacc326.jpg" alt="RAPP" width="140" />
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <!--[if (gte mso 9)|(IE)]>
+                                                    </td>
+                                                    <td width="300">
+                                                    <![endif]-->
+                                                    <table align="right" width="300" cellpadding="5" cellspacing="0" border="0" class="footer-right">
+                                                        <tr>
+                                                            <td align="right">
+                                                                <table cellpadding="5" cellspacing="0" border="0" class="footer-content">
+                                                                    <tr>
+                                                                        <td>
+                                                                            <a href="https://www.facebook.com/RAPPWORLDWIDE/" target="_blank" alias=""><img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/799e5aad-d9fe-4981-8341-85766fc62d2a.jpg" alt="Facebook" width="33" /></a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <a href="https://twitter.com/RAPP" target="_blank" alias=""><img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/470de26b-d0b7-4b0e-98c7-32f6f8c28f60.jpg" alt="Twitter" width="33" /></a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <a href="https://www.instagram.com/rappworldwide/" target="_blank" alias=""><img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/be57219d-7df9-4c87-ac1e-fdcfda8f5b60.jpg" alt="Instagram" width="33" /></a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <a href="https://www.linkedin.com/company/rapp/" target="_blank" alias=""><img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/2477110a-bf48-41f8-9486-5755710ca65a.jpg" alt="LinkedIn" width="33" /></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <!--[if (gte mso 9)|(IE)]>
+                                                    </td>
+                                                    </tr>
+                                                    </table>
+                                                    <![endif]-->
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" class="space-divider"  style="font-size: 15px !important; height: 15px !important; line-height: 15px !important;">
+                                                    &nbsp;
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" class="space-divider"  style="font-size: 20px !important; height: 20px !important; line-height: 20px !important;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <!-- Legal -->
+                                <tr>
+                                    <td align="center">
+                                        <p class="copyright">&copy; 2020 RAPP. All rights reserved.</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <!-- prevent Gmail on iOS font size manipulation -->
+                <div class="gmailfix" style="white-space:nowrap; font:15px courier; line-height:0;"> &nbsp; &nbsp;
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                </div>
+</body>
+</html>
