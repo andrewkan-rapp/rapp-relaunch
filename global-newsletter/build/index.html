@@ -3,9 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>RAPP</title>
+    <title>RAPP - Global Updates</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <style type="text/css">
+        /*  
+            Custom Fonts
+                Fallbacks are in place
+                This is for all devices
+        */
+        @media screen {
+
+            @font-face {
+                font-family: 'DIN-Bold';
+                src: url('https://cdn.rapp.com/fonts/DINOffcPro%2DBold.eot?1555633958');
+                src: url('https://cdn.rapp.com/fonts/DINOffcPro%2DBold.eot?&1555633958#iefix') format('embedded-opentype'),
+                    url('https://cdn.rapp.com/fonts/DINOffcPro%2DBold.ttf?1555633958') format('truetype')
+            }
+
+            @font-face {
+                font-family: 'DIN-Regular';
+                src: url('https://cdn.rapp.com/fonts/DINOffcPro.eot?1555633958');
+                src: url('https://cdn.rapp.com/fonts/DINOffcPro.eot?&1555633958#iefix') format('embedded-opentype'),
+                    url('https://cdn.rapp.com/fonts/DINOffcPro.ttf?1555633958') format('truetype')
+            }
+
+            @font-face {
+                font-family: 'Helvetica-Bold';
+                src: local('Helvetica');
+                font-weight: bold;
+            }
+
+            @font-face {
+                font-family: 'Arial-Bold';
+                src: local('Arial');
+                font-weight: bold;
+            }
+
+            @font-face {
+                font-family: 'Helvetica-Italic';
+                src: local('Helvetica');
+                font-style: italic;
+                font-weight: normal;
+            }
+
+            @font-face {
+                font-family: 'Arial-Italic';
+                src: local('Arial');
+                font-style: italic;
+                font-weight: normal;
+            }
+        }
+        /* END Custom Fonts */
+
         /* Outlook fix */
         #outlook a {
             padding: 0;
@@ -19,7 +68,7 @@
             background-color: #ffffff;
             margin: 0;
             padding: 0;
-            font-family:'DIN-Regular', 'Roboto', Arial, sans-serif;
+            font-family: 'DIN-Regular', 'Roboto', Arial, sans-serif;
         }
 
         img {
@@ -120,7 +169,7 @@
             display: block !important;
             margin: 0;
             padding: 0;
-            overflow : visible !important;
+            overflow: visible !important;
             width: auto !important;
             max-height: inherit !important;
         }
@@ -138,58 +187,8 @@
             width: auto !important;
             max-height: inherit !important;
         }
+
         /* END Styles specific for which device the user is on */
-
-        /*  
-            Custom Fonts
-                Fallbacks are in place
-                This is for all devices
-         */
-        @media screen {
-
-            @font-face{
-                font-family:'DIN-Bold';
-                src:url('https://holiday.rapp.com/css/fonts/DINWebPro-Bold.eot?1555633958');
-                src:url('https://holiday.rapp.com/css/fonts/DINWebPro-Bold.eot?&1555633958#iefix') format('embedded-opentype'),
-                url('https://holiday.rapp.com/css/fonts/DINWebPro-Bold.woff?1555633958') format('woff'),url('https://holiday.rapp.com/css/fonts/DINWebPro-Bold.svg?1555633958') format('svg'),
-                url('https://holiday.rapp.com/css/fonts/DINWebPro-Bold.ttf?1555633958') format('truetype')
-            }
-
-            @font-face{
-                font-family:'DIN-Regular';
-                src:url('https://holiday.rapp.com/css/fonts/DINWebPro.eot?1555633958');
-                src:url('https://holiday.rapp.com/css/fonts/DINWebPro.eot?&1555633958#iefix') format('embedded-opentype'),
-                    url('https://holiday.rapp.com/css/fonts/DINWebPro.woff?1555633958') format('woff'),url('https://holiday.rapp.com/css/fonts/DINWebPro.svg?1555633958') format('svg'),
-                    url('https://holiday.rapp.com/css/fonts/DINWebPro.ttf?1555633958') format('truetype')
-            }
-
-            @font-face {
-                font-family: 'Helvetica-Bold';
-                src: local('Helvetica');
-                font-weight: bold;
-            }
-
-            @font-face {
-                font-family: 'Arial-Bold';
-                src: local('Arial');
-                font-weight: bold;
-            }
-
-            @font-face {
-                font-family: 'Helvetica-Italic';
-                src: local('Helvetica');
-                font-style: italic;
-                font-weight: normal;
-            }
-
-            @font-face {
-                font-family: 'Arial-Italic';
-                src: local('Arial');
-                font-style: italic;
-                font-weight: normal;
-            }
-        }
-        /* END Custom Fonts */
 
         /***************************************************
         ****************************************************
@@ -218,7 +217,7 @@
         }
 
         .sub-headline {
-            font-family:'DIN-Bold', 'Roboto', Arial Bold, sans-serif;
+            font-family: 'DIN-Bold', 'Roboto', Arial Bold, sans-serif;
             font-weight: 700;
             margin: 0;
             line-height: 27px;
@@ -226,7 +225,7 @@
         }
 
         .emp {
-            font-family:'DIN-Bold', 'Roboto', Arial Bold, sans-serif;
+            font-family: 'DIN-Bold', 'Roboto', Arial Bold, sans-serif;
             font-weight: 700;
             margin-bottom: 0;
         }
@@ -334,6 +333,7 @@
                 width: auto !important;
                 max-height: inherit !important;
             }
+
             /* END Responsive styling */
 
             .full_width {
@@ -360,6 +360,7 @@
             .hero-img {
                 width: 100%;
             }
+
             /* END Resets */
 
             /* Author Styles */
@@ -372,7 +373,8 @@
                 margin-bottom: 20px;
             }
 
-            .footer-left, .footer-right {
+            .footer-left,
+            .footer-right {
                 width: 100%;
                 text-align: center;
             }
@@ -397,6 +399,7 @@
             .copyright {
                 font-size: 11px;
             }
+
             /* END Author Styles */
         }
     </style>
@@ -415,7 +418,7 @@
     <![endif]-->
 
     <!--[if mso]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]-->
-    
+
     <!--[if gte mso 14]>
     <style>     
 
@@ -464,7 +467,8 @@
                         <!-- Preview Text -->
                         <td class="preview_text">
                             <div style="display:none;"><span
-                                    style="font-family:'DIN-Regular', 'Roboto', Arial, sans-serif;font-size:1px;line-height:1px;color:#ffffff;">Each RAPP USA office wanted to send you a special message</span></div>
+                                    style="font-family:'DIN-Regular', 'Roboto', Arial, sans-serif;font-size:1px;line-height:1px;color:#ffffff;">Each
+                                    RAPP USA office wanted to send you a special message</span></div>
                             <div style="display: none; max-height: 0px; overflow: hidden;">
                                 &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
                             </div>
@@ -478,17 +482,22 @@
                                 style="border-collapse:collapse;">
                                 <tr>
                                     <td align="left"
-                                    style="vertical-align:middle;height:80px;mso-line-height-rule:exactly;margin:0;"
-                                    class="preheader_links_wrap">
+                                        style="vertical-align:middle;height:80px;mso-line-height-rule:exactly;margin:0;"
+                                        class="preheader_links_wrap">
                                         <!-- Desktop Rapp Logo -->
-                                        <a href="https://www.rapp.com" target="_blank" class="desktop" style="text-decoration: none;">
-                                            <img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/4dc130a7-5a8b-42a7-927b-ed17a523e975.jpg" width="167" height="37" alt="RAPP" />
+                                        <a href="https://www.rapp.com" target="_blank" class="desktop"
+                                            style="text-decoration: none;">
+                                            <img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/4dc130a7-5a8b-42a7-927b-ed17a523e975.jpg"
+                                                width="167" height="37" alt="RAPP" />
                                         </a>
                                         <!-- Mobile Preheader -->
                                         <!--[if !mso]><!-->
-                                        <div style="display:none;width:0px;max-height:0px;overflow:hidden;" class="mobile">
-                                            <a href="https://www.rapp.com" target="_blank" style="text-decoration: none;">
-                                                <img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/4dc130a7-5a8b-42a7-927b-ed17a523e975.jpg" width="167" height="37" alt="RAPP" />
+                                        <div style="display:none;width:0px;max-height:0px;overflow:hidden;"
+                                            class="mobile">
+                                            <a href="https://www.rapp.com" target="_blank"
+                                                style="text-decoration: none;">
+                                                <img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/4dc130a7-5a8b-42a7-927b-ed17a523e975.jpg"
+                                                    width="167" height="37" alt="RAPP" />
                                             </a>
                                             <br>
                                         </div>
@@ -502,14 +511,20 @@
                                             class="preheader_links">
                                             <!-- Desktop Preheader -->
                                             <div class="desktop">
-                                                <a href="%%view_email_url%%" alias="webview"
-                                                    target="_blank" style="color:#000000;text-decoration:underline;margin-left: 10px;"><span
-                                                        style="color:#000000;text-decoration:underline;"><strong style="font-weight: normal;">View as a Web page</strong></span></a>
+                                                <a href="%%view_email_url%%" alias="webview" target="_blank"
+                                                    style="color:#000000;text-decoration:underline;margin-left: 10px;"><span
+                                                        style="color:#000000;text-decoration:underline;"><strong
+                                                            style="font-weight: normal;">View as a Web
+                                                            page</strong></span></a>
                                             </div>
                                             <!-- Mobile Preheader -->
                                             <!--[if !mso]><!-->
-                                            <div style="display:none;width:0px;max-height:0px;overflow:hidden;" class="mobile"><a href="%%view_email_url%%" alias="webview"
-                                                    target="_blank" style="color:#000000;text-decoration:underline;display:block;"><strong style="font-weight: normal;">View as a Web page</strong></a><br></div>
+                                            <div style="display:none;width:0px;max-height:0px;overflow:hidden;"
+                                                class="mobile"><a href="%%view_email_url%%" alias="webview"
+                                                    target="_blank"
+                                                    style="color:#000000;text-decoration:underline;display:block;"><strong
+                                                        style="font-weight: normal;">View as a Web page</strong></a><br>
+                                            </div>
                                             <!--<![endif]-->
                                         </span>
                                     </td>
@@ -525,8 +540,10 @@
                             <table cellpadding="0" cellspacing="0" border="0" class="full_width">
 
                                 <!-- Empty Divider -->
-                                <tr style="font-size: 10px !important; height: 10px !important; line-height: 10px !important;">
-                                    <td align="center" class="space-divider" style="font-size: 10px !important; height: 10px !important; line-height: 10px !important;">
+                                <tr
+                                    style="font-size: 10px !important; height: 10px !important; line-height: 10px !important;">
+                                    <td align="center" class="space-divider"
+                                        style="font-size: 10px !important; height: 10px !important; line-height: 10px !important;">
                                         &nbsp;
                                     </td>
                                 </tr>
@@ -535,14 +552,16 @@
                                 <!-- Hero Image -->
                                 <tr>
                                     <td align="center">
-                                        <img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/ff344d72-ffa0-40b7-8c98-c74f563fd11c.jpg" width="600" alt="Brand Update" class="hero-img" />
+                                        <img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/ff344d72-ffa0-40b7-8c98-c74f563fd11c.jpg"
+                                            width="600" alt="Brand Update" class="hero-img" />
                                     </td>
                                 </tr>
                                 <!-- END Hero Image -->
 
                                 <!-- Empty Divider -->
                                 <tr>
-                                    <td align="center" class="space-divider" style="font-size: 30px !important; height: 30px !important; line-height: 30px !important;">
+                                    <td align="center" class="space-divider"
+                                        style="font-size: 30px !important; height: 30px !important; line-height: 30px !important;">
                                         &nbsp;
                                     </td>
                                 </tr>
@@ -552,17 +571,22 @@
                                 <!-- Story 1 -->
                                 <tr>
                                     <td>
-                                        <img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/b403a379-3bd5-486c-850b-210bcfd64d36.jpg" alt="" class="hero-img story" />
+                                        <img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/b403a379-3bd5-486c-850b-210bcfd64d36.jpg"
+                                            alt="" class="hero-img story" />
                                     </td>
                                 </tr>
                                 <tr>
                                     <td align="center">
-                                        <table cellpadding="10" cellspacing="0" border="0" align="middle" style="border-collapse:collapse;">
+                                        <table cellpadding="10" cellspacing="0" border="0" align="middle"
+                                            style="border-collapse:collapse;">
                                             <tr>
                                                 <td>
-                                                    <h2 class="sub-headline">KERN GIVES A FRESH PERSPECTIVE ON AZ HEALTHCARE</h2>
+                                                    <h2 class="sub-headline">KERN GIVES A FRESH PERSPECTIVE ON AZ
+                                                        HEALTHCARE</h2>
                                                     <p>
-                                                        Research, strategy, creative and production came together for some incredibly beautiful (and hot) production days across Arizona and resulted in the "Arizona Healthy" campaign.
+                                                        Research, strategy, creative and production came together for
+                                                        some incredibly beautiful (and hot) production days across
+                                                        Arizona and resulted in the "Arizona Healthy" campaign.
                                                     </p>
                                                 </td>
                                             </tr>
@@ -577,7 +601,8 @@
                                                     <table cellspacing="0" cellpadding="0">
                                                         <tr>
                                                             <td class="button" bgcolor="#000000">
-                                                                <a class="link" href="https://vimeo.com/372498591" target="_blank" alias="">
+                                                                <a class="link" href="https://vimeo.com/372498591"
+                                                                    target="_blank" alias="">
                                                                     See the Spot
                                                                 </a>
                                                             </td>
@@ -592,7 +617,8 @@
 
                                 <!-- Empty Divider -->
                                 <tr>
-                                    <td align="center" class="space-divider" style="font-size: 30px !important; height: 30px !important; line-height: 30px !important;">
+                                    <td align="center" class="space-divider"
+                                        style="font-size: 30px !important; height: 30px !important; line-height: 30px !important;">
                                         &nbsp;
                                     </td>
                                 </tr>
@@ -601,17 +627,23 @@
                                 <!-- Story 2 -->
                                 <tr>
                                     <td>
-                                        <img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/2f91519d-a8e7-44bf-9d08-956da3f11cba.jpg" alt="" class="hero-img story" />
+                                        <img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/2f91519d-a8e7-44bf-9d08-956da3f11cba.jpg"
+                                            alt="" class="hero-img story" />
                                     </td>
                                 </tr>
                                 <tr>
                                     <td align="center">
-                                        <table cellpadding="10" cellspacing="0" border="0" align="middle" style="border-collapse:collapse;">
+                                        <table cellpadding="10" cellspacing="0" border="0" align="middle"
+                                            style="border-collapse:collapse;">
                                             <tr>
                                                 <td>
                                                     <h2 class="sub-headline">GARTNER WELCOMES RAPP</h2>
                                                     <p>
-                                                        RAPP has participated in Gartner’s Magic Quadrant assessment, for Global Marketing Agencies. We’ve acquired a research license for 2020, to utilize Gartner’s library of content, analyst briefings and client connections. If you’d like access to Gartner Research reach out to Devin.
+                                                        RAPP has participated in Gartner’s Magic Quadrant assessment,
+                                                        for Global Marketing Agencies. We’ve acquired a research license
+                                                        for 2020, to utilize Gartner’s library of content, analyst
+                                                        briefings and client connections. If you’d like access to
+                                                        Gartner Research reach out to Devin.
                                                     </p>
                                                 </td>
                                             </tr>
@@ -626,7 +658,8 @@
                                                     <table cellspacing="0" cellpadding="0">
                                                         <tr>
                                                             <td class="button" bgcolor="#000000">
-                                                                <a class="link" href="mailto:devin.oloughlin@rapp.com" target="_blank" alias="">
+                                                                <a class="link" href="mailto:devin.oloughlin@rapp.com"
+                                                                    target="_blank" alias="">
                                                                     Email Devin
                                                                 </a>
                                                             </td>
@@ -641,7 +674,8 @@
 
                                 <!-- Empty Divider -->
                                 <tr>
-                                    <td align="center" class="space-divider" style="font-size: 30px !important; height: 30px !important; line-height: 30px !important;">
+                                    <td align="center" class="space-divider"
+                                        style="font-size: 30px !important; height: 30px !important; line-height: 30px !important;">
                                         &nbsp;
                                     </td>
                                 </tr>
@@ -650,17 +684,23 @@
                                 <!-- Story 3 -->
                                 <tr>
                                     <td>
-                                        <img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/083cccad-d11b-4d0e-aa60-a96720446315.jpg" alt="" class="hero-img story" />
+                                        <img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/083cccad-d11b-4d0e-aa60-a96720446315.jpg"
+                                            alt="" class="hero-img story" />
                                     </td>
                                 </tr>
                                 <tr>
                                     <td align="center">
-                                        <table cellpadding="10" cellspacing="0" border="0" align="middle" style="border-collapse:collapse;">
+                                        <table cellpadding="10" cellspacing="0" border="0" align="middle"
+                                            style="border-collapse:collapse;">
                                             <tr>
                                                 <td>
                                                     <h2 class="sub-headline">CES 2020</h2>
                                                     <p>
-                                                        CES 2020 proved that the best things are going to get more powerful, more premium, and more expensive. 5G Phones, High Refresh Rate TVs, Streaming services, and artificial humans are some of the big winners this year. Take a moment and read more about it.
+                                                        CES 2020 proved that the best things are going to get more
+                                                        powerful, more premium, and more expensive. 5G Phones, High
+                                                        Refresh Rate TVs, Streaming services, and artificial humans are
+                                                        some of the big winners this year. Take a moment and read more
+                                                        about it.
                                                     </p>
                                                 </td>
                                             </tr>
@@ -675,7 +715,8 @@
                                                     <table cellspacing="0" cellpadding="0">
                                                         <tr>
                                                             <td class="button" bgcolor="#000000">
-                                                                <a class="link" href="mailto:heather.salkin@rapp.com" target="_blank" alias="">
+                                                                <a class="link" href="mailto:heather.salkin@rapp.com"
+                                                                    target="_blank" alias="">
                                                                     Email Heather
                                                                 </a>
                                                             </td>
@@ -691,7 +732,8 @@
 
                                 <!-- Empty Divider -->
                                 <tr>
-                                    <td align="center" class="space-divider"  style="font-size: 30px !important; height: 30px !important; line-height: 30px !important;">
+                                    <td align="center" class="space-divider"
+                                        style="font-size: 30px !important; height: 30px !important; line-height: 30px !important;">
                                         &nbsp;
                                     </td>
                                 </tr>
@@ -700,7 +742,8 @@
                                 <!-- Sub Story 1 -->
                                 <tr>
                                     <td align="center">
-                                        <table width="100%" cellpadding="0" cellspacing="0" border="0" class="full_width">
+                                        <table width="100%" cellpadding="0" cellspacing="0" border="0"
+                                            class="full_width">
                                             <!-- Two column layout -->
                                             <tr>
                                                 <td>
@@ -709,10 +752,12 @@
                                                         <tr>
                                                         <td width="300">
                                                         <![endif]-->
-                                                    <table align="left" width="319" cellpadding="0" cellspacing="0" border="0" class="left-col">
+                                                    <table align="left" width="319" cellpadding="0" cellspacing="0"
+                                                        border="0" class="left-col">
                                                         <tr>
                                                             <td>
-                                                                <img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/fbdcd6e3-726b-4594-8d05-a38c7b1564a9.jpg" width="319" class="hero-img sub-story" />
+                                                                <img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/fbdcd6e3-726b-4594-8d05-a38c7b1564a9.jpg"
+                                                                    width="319" class="hero-img sub-story" />
                                                             </td>
                                                         </tr>
                                                     </table>
@@ -720,11 +765,15 @@
                                                     </td>
                                                     <td width="300">
                                                     <![endif]-->
-                                                    <table align="right" width="260" cellpadding="0" cellspacing="0" border="0" class="right-col">
+                                                    <table align="right" width="260" cellpadding="0" cellspacing="0"
+                                                        border="0" class="right-col">
                                                         <tr>
                                                             <td>
-                                                                <h2 class="sub-headline">HOW RAPP & VIRGIN MEDIA CELEBRATED CHRISTMAS</h2>
-                                                                <p>As part of its unlimited offering, Virgin Media celebrated and rewarded its customers, this past Christmas, with unlimited generosity.</p>
+                                                                <h2 class="sub-headline">HOW RAPP & VIRGIN MEDIA
+                                                                    CELEBRATED CHRISTMAS</h2>
+                                                                <p>As part of its unlimited offering, Virgin Media
+                                                                    celebrated and rewarded its customers, this past
+                                                                    Christmas, with unlimited generosity.</p>
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -732,10 +781,14 @@
                                                                 <table width="100%" cellspacing="0" cellpadding="0">
                                                                     <tr>
                                                                         <td align="left">
-                                                                            <table cellspacing="0" cellpadding="0" class="center">
+                                                                            <table cellspacing="0" cellpadding="0"
+                                                                                class="center">
                                                                                 <tr>
-                                                                                    <td class="button" bgcolor="#000000">
-                                                                                        <a class="link" href="https://lbbonline.com/news/now-thats-christmas-ing-is-the-gift-that-keeps-on-giving/" target="_blank" alias="">
+                                                                                    <td class="button"
+                                                                                        bgcolor="#000000">
+                                                                                        <a class="link"
+                                                                                            href="https://lbbonline.com/news/now-thats-christmas-ing-is-the-gift-that-keeps-on-giving/"
+                                                                                            target="_blank" alias="">
                                                                                             Learn More
                                                                                         </a>
                                                                                     </td>
@@ -762,7 +815,8 @@
 
                                 <!-- Empty Divider -->
                                 <tr>
-                                    <td align="center" class="space-divider"  style="font-size: 30px !important; height: 30px !important; line-height: 30px !important;">
+                                    <td align="center" class="space-divider"
+                                        style="font-size: 30px !important; height: 30px !important; line-height: 30px !important;">
                                         &nbsp;
                                     </td>
                                 </tr>
@@ -771,7 +825,8 @@
                                 <!-- Sub Story 2 -->
                                 <tr>
                                     <td align="center">
-                                        <table width="100%" cellpadding="0" cellspacing="0" border="0" class="full_width">
+                                        <table width="100%" cellpadding="0" cellspacing="0" border="0"
+                                            class="full_width">
                                             <!-- Two column layout -->
                                             <tr>
                                                 <td>
@@ -780,10 +835,12 @@
                                                         <tr>
                                                         <td width="300">
                                                         <![endif]-->
-                                                    <table align="left" width="319" cellpadding="0" cellspacing="0" border="0" class="left-col">
+                                                    <table align="left" width="319" cellpadding="0" cellspacing="0"
+                                                        border="0" class="left-col">
                                                         <tr>
                                                             <td>
-                                                                <img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/9e3e4963-d671-458a-a19d-bf76761acf33.jpg" width="319" class="hero-img sub-story" />
+                                                                <img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/9e3e4963-d671-458a-a19d-bf76761acf33.jpg"
+                                                                    width="319" class="hero-img sub-story" />
                                                             </td>
                                                         </tr>
                                                     </table>
@@ -791,16 +848,33 @@
                                                     </td>
                                                     <td width="300">
                                                     <![endif]-->
-                                                    <table align="right" width="260" cellpadding="0" cellspacing="0" border="0" class="right-col">
+                                                    <table align="right" width="260" cellpadding="0" cellspacing="0"
+                                                        border="0" class="right-col">
                                                         <tr>
                                                             <td>
                                                                 <h2 class="sub-headline">WHAT'S RAPPENING?</h2>
                                                                 <ul class="sub-list">
                                                                     <li>
-                                                                        RAPP celebrated the holidays with <a href="https://www.instagram.com/p/B6L35I-gq2k/" target="_blank" alias="" style="color:#000000;">ugly sweater parties</a>, <a href="https://www.instagram.com/p/B6THS_oAvzg/" target="_blank" alias="" style="color:#000000;">wine carts</a>, <a href="https://www.instagram.com/p/B6BLG3LA8jo/" target="_blank" alias="" style="color:#000000;">food drives</a> and lots of festive fun.
+                                                                        RAPP celebrated the holidays with <a
+                                                                            href="https://www.instagram.com/p/B6L35I-gq2k/"
+                                                                            target="_blank" alias=""
+                                                                            style="color:#000000;">ugly sweater
+                                                                            parties</a>, <a
+                                                                            href="https://www.instagram.com/p/B6THS_oAvzg/"
+                                                                            target="_blank" alias=""
+                                                                            style="color:#000000;">wine carts</a>, <a
+                                                                            href="https://www.instagram.com/p/B6BLG3LA8jo/"
+                                                                            target="_blank" alias=""
+                                                                            style="color:#000000;">food drives</a> and
+                                                                        lots of festive fun.
                                                                     </li>
                                                                     <li>
-                                                                        RAPP UK'S Creative Apprentice, Muniira, had an opportunity to meet <a href="https://www.instagram.com/p/B5DgyZLgM49/" target="_blank" alias="" style="color:#000000;">Prince William</a> as a part of her apprenticeship journey with RAPP!
+                                                                        RAPP UK'S Creative Apprentice, Muniira, had an
+                                                                        opportunity to meet <a
+                                                                            href="https://www.instagram.com/p/B5DgyZLgM49/"
+                                                                            target="_blank" alias=""
+                                                                            style="color:#000000;">Prince William</a> as
+                                                                        a part of her apprenticeship journey with RAPP!
                                                                     </li>
                                                                 </ul>
                                                             </td>
@@ -821,7 +895,8 @@
 
                                 <!-- Empty Divider -->
                                 <tr>
-                                    <td align="center" class="space-divider"  style="font-size: 30px !important; height: 30px !important; line-height: 30px !important;">
+                                    <td align="center" class="space-divider"
+                                        style="font-size: 30px !important; height: 30px !important; line-height: 30px !important;">
                                         &nbsp;
                                     </td>
                                 </tr>
@@ -830,7 +905,8 @@
                                 <!-- Sub Story 3 -->
                                 <tr>
                                     <td align="center">
-                                        <table width="100%" cellpadding="0" cellspacing="0" border="0" class="full_width">
+                                        <table width="100%" cellpadding="0" cellspacing="0" border="0"
+                                            class="full_width">
                                             <!-- Two column layout -->
                                             <tr>
                                                 <td>
@@ -839,10 +915,12 @@
                                                         <tr>
                                                         <td width="300">
                                                         <![endif]-->
-                                                    <table align="left" width="319" cellpadding="0" cellspacing="0" border="0" class="left-col">
+                                                    <table align="left" width="319" cellpadding="0" cellspacing="0"
+                                                        border="0" class="left-col">
                                                         <tr>
                                                             <td>
-                                                                <img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/74d7dcc1-bbe3-4870-85ed-c2c8600f74af.jpg" width="319" class="hero-img sub-story" />
+                                                                <img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/74d7dcc1-bbe3-4870-85ed-c2c8600f74af.jpg"
+                                                                    width="319" class="hero-img sub-story" />
                                                             </td>
                                                         </tr>
                                                     </table>
@@ -850,12 +928,16 @@
                                                     </td>
                                                     <td width="300">
                                                     <![endif]-->
-                                                    <table align="right" width="260" cellpadding="0" cellspacing="0" border="0" class="right-col">
+                                                    <table align="right" width="260" cellpadding="0" cellspacing="0"
+                                                        border="0" class="right-col">
                                                         <tr>
                                                             <td>
-                                                                <h2 class="sub-headline">RALPH LAUREN AROUND THE GLOBE</h2>
+                                                                <h2 class="sub-headline">RALPH LAUREN AROUND THE GLOBE
+                                                                </h2>
                                                                 <p>
-                                                                    Code London have extended their Ralph Lauren remit, winning a significant piece of business with the Ralph Lauren North America team.
+                                                                    Code London have extended their Ralph Lauren remit,
+                                                                    winning a significant piece of business with the
+                                                                    Ralph Lauren North America team.
                                                                 </p>
                                                             </td>
                                                         </tr>
@@ -875,7 +957,8 @@
 
                                 <!-- Empty Divider -->
                                 <tr>
-                                    <td align="center" class="space-divider"  style="font-size: 30px !important; height: 30px !important; line-height: 30px !important;">
+                                    <td align="center" class="space-divider"
+                                        style="font-size: 30px !important; height: 30px !important; line-height: 30px !important;">
                                         &nbsp;
                                     </td>
                                 </tr>
@@ -884,7 +967,8 @@
                                 <!-- Sub Story 4 -->
                                 <tr>
                                     <td align="center">
-                                        <table width="100%" cellpadding="0" cellspacing="0" border="0" class="full_width">
+                                        <table width="100%" cellpadding="0" cellspacing="0" border="0"
+                                            class="full_width">
                                             <!-- Two column layout -->
                                             <tr>
                                                 <td>
@@ -893,10 +977,12 @@
                                                         <tr>
                                                         <td width="300">
                                                         <![endif]-->
-                                                    <table align="left" width="319" cellpadding="0" cellspacing="0" border="0" class="left-col">
+                                                    <table align="left" width="319" cellpadding="0" cellspacing="0"
+                                                        border="0" class="left-col">
                                                         <tr>
                                                             <td>
-                                                                <img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/b78b89e0-2ffe-45bd-9b47-ce786b0e73ac.jpg" width="319" class="hero-img sub-story" />
+                                                                <img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/b78b89e0-2ffe-45bd-9b47-ce786b0e73ac.jpg"
+                                                                    width="319" class="hero-img sub-story" />
                                                             </td>
                                                         </tr>
                                                     </table>
@@ -904,11 +990,15 @@
                                                     </td>
                                                     <td width="300">
                                                     <![endif]-->
-                                                    <table align="right" width="260" cellpadding="0" cellspacing="0" border="0" class="right-col">
+                                                    <table align="right" width="260" cellpadding="0" cellspacing="0"
+                                                        border="0" class="right-col">
                                                         <tr>
                                                             <td>
-                                                                <h2 class="sub-headline">INCLUSIVITY MUST NOT BE LOST IN THE DRIVE FOR DIVERSITY</h2>
-                                                                <p>Diversity is a consequence of true inclusion—of safe workspaces that allow people to turn up as themselves.</p>
+                                                                <h2 class="sub-headline">INCLUSIVITY MUST NOT BE LOST IN
+                                                                    THE DRIVE FOR DIVERSITY</h2>
+                                                                <p>Diversity is a consequence of true inclusion—of safe
+                                                                    workspaces that allow people to turn up as
+                                                                    themselves.</p>
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -916,10 +1006,14 @@
                                                                 <table width="100%" cellspacing="0" cellpadding="0">
                                                                     <tr>
                                                                         <td align="left">
-                                                                            <table cellspacing="0" cellpadding="0" class="center">
+                                                                            <table cellspacing="0" cellpadding="0"
+                                                                                class="center">
                                                                                 <tr>
-                                                                                    <td class="button" bgcolor="#000000">
-                                                                                        <a class="link" href="https://www.thedrum.com/opinion/2019/12/16/inclusivity-must-not-be-lost-the-drive-diversity" target="_blank" alias="">
+                                                                                    <td class="button"
+                                                                                        bgcolor="#000000">
+                                                                                        <a class="link"
+                                                                                            href="https://www.thedrum.com/opinion/2019/12/16/inclusivity-must-not-be-lost-the-drive-diversity"
+                                                                                            target="_blank" alias="">
                                                                                             Read Al's Story
                                                                                         </a>
                                                                                     </td>
@@ -946,7 +1040,8 @@
 
                                 <!-- Empty Divider -->
                                 <tr>
-                                    <td align="center" class="space-divider"  style="font-size: 30px !important; height: 30px !important; line-height: 30px !important;">
+                                    <td align="center" class="space-divider"
+                                        style="font-size: 30px !important; height: 30px !important; line-height: 30px !important;">
                                         &nbsp;
                                     </td>
                                 </tr>
@@ -958,16 +1053,27 @@
                                         <h2 class="sub-headline">RAPP IN THE NEWS</h2>
                                         <ul>
                                             <li>
-                                                Shravya Kaparthi dives into why people <a href="https://www.i-com.org/news-articles/people-dont-hate-ads-as-mush-as-they-love-content-that-resonates" target="_blank" alias="" style="color:#000000;">don’t hate ads</a>
+                                                Shravya Kaparthi dives into why people <a
+                                                    href="https://www.i-com.org/news-articles/people-dont-hate-ads-as-mush-as-they-love-content-that-resonates"
+                                                    target="_blank" alias="" style="color:#000000;">don’t hate ads</a>
                                             </li>
                                             <li>
-                                                Jared Rodecker weighs on <a href="https://www.i-com.org/news-articles/people-dont-hate-ads-as-mush-as-they-love-content-that-resonates" target="_blank" alias="" style="color:#000000;">navigating the talent crunch</a>
+                                                Jared Rodecker weighs on <a
+                                                    href="https://www.i-com.org/news-articles/people-dont-hate-ads-as-mush-as-they-love-content-that-resonates"
+                                                    target="_blank" alias="" style="color:#000000;">navigating the
+                                                    talent crunch</a>
                                             </li>
                                             <li>
-                                                Heather Salkin shares <a href="https://www.i-com.org/news-articles/people-dont-hate-ads-as-mush-as-they-love-content-that-resonates" target="_blank" alias="" style="color:#000000;">female-forward culture</a> in our industry
+                                                Heather Salkin shares <a
+                                                    href="https://www.i-com.org/news-articles/people-dont-hate-ads-as-mush-as-they-love-content-that-resonates"
+                                                    target="_blank" alias="" style="color:#000000;">female-forward
+                                                    culture</a> in our industry
                                             </li>
                                             <li>
-                                                John Wells explains the <a href="https://www.i-com.org/news-articles/people-dont-hate-ads-as-mush-as-they-love-content-that-resonates" target="_blank" alias="" style="color:#000000;">value of the Marketing Generalist</a>
+                                                John Wells explains the <a
+                                                    href="https://www.i-com.org/news-articles/people-dont-hate-ads-as-mush-as-they-love-content-that-resonates"
+                                                    target="_blank" alias="" style="color:#000000;">value of the
+                                                    Marketing Generalist</a>
                                             </li>
                                         </ul>
                                     </td>
@@ -976,7 +1082,8 @@
 
                                 <!-- Empty Divider -->
                                 <tr>
-                                    <td align="center" class="space-divider"  style="font-size: 20px !important; height: 20px !important; line-height: 20px !important;">
+                                    <td align="center" class="space-divider"
+                                        style="font-size: 20px !important; height: 20px !important; line-height: 20px !important;">
                                         &nbsp;
                                     </td>
                                 </tr>
@@ -984,7 +1091,8 @@
 
                                 <!-- Empty Divider with background color -->
                                 <tr>
-                                    <td align="center" class="space-divider height-o"  style="font-size: 5px; height: 5px; line-height: 5px; background-color: #ff6500;">
+                                    <td align="center" class="space-divider height-o"
+                                        style="font-size: 5px; height: 5px; line-height: 5px; background-color: #ff6500;">
                                         &nbsp;
                                     </td>
                                 </tr>
@@ -993,10 +1101,12 @@
                                 <!-- Footer Content -->
                                 <tr>
                                     <td>
-                                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #eeeeee;" class="full_width">
+                                        <table width="100%" cellpadding="0" cellspacing="0" border="0"
+                                            style="background-color: #eeeeee;" class="full_width">
                                             <!-- Empty Divider -->
                                             <tr>
-                                                <td align="center" class="space-divider"  style="font-size: 15px !important; height: 15px !important; line-height: 15px !important;">
+                                                <td align="center" class="space-divider"
+                                                    style="font-size: 15px !important; height: 15px !important; line-height: 15px !important;">
                                                     &nbsp;
                                                 </td>
                                             </tr>
@@ -1009,11 +1119,14 @@
                                                         <tr>
                                                         <td width="300">
                                                         <![endif]-->
-                                                    <table align="left" width="300" cellpadding="10" cellspacing="0" border="0" class="footer-left">
+                                                    <table align="left" width="300" cellpadding="10" cellspacing="0"
+                                                        border="0" class="footer-left">
                                                         <tr>
                                                             <td>
-                                                                <a href="https://www.rapp.com" target="_blank" style="text-decoration: none;">
-                                                                    <img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/926a9291-a5dd-41b3-b8fd-5e38efacc326.jpg" alt="RAPP" width="140" />
+                                                                <a href="https://www.rapp.com" target="_blank"
+                                                                    style="text-decoration: none;">
+                                                                    <img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/926a9291-a5dd-41b3-b8fd-5e38efacc326.jpg"
+                                                                        alt="RAPP" width="140" />
                                                                 </a>
                                                             </td>
                                                         </tr>
@@ -1022,22 +1135,36 @@
                                                     </td>
                                                     <td width="300">
                                                     <![endif]-->
-                                                    <table align="right" width="300" cellpadding="5" cellspacing="0" border="0" class="footer-right">
+                                                    <table align="right" width="300" cellpadding="5" cellspacing="0"
+                                                        border="0" class="footer-right">
                                                         <tr>
                                                             <td align="right">
-                                                                <table cellpadding="5" cellspacing="0" border="0" class="footer-content">
+                                                                <table cellpadding="5" cellspacing="0" border="0"
+                                                                    class="footer-content">
                                                                     <tr>
                                                                         <td>
-                                                                            <a href="https://www.facebook.com/RAPPWORLDWIDE/" target="_blank" alias=""><img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/799e5aad-d9fe-4981-8341-85766fc62d2a.jpg" alt="Facebook" width="33" /></a>
+                                                                            <a href="https://www.facebook.com/RAPPWORLDWIDE/"
+                                                                                target="_blank" alias=""><img
+                                                                                    src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/799e5aad-d9fe-4981-8341-85766fc62d2a.jpg"
+                                                                                    alt="Facebook" width="33" /></a>
                                                                         </td>
                                                                         <td>
-                                                                            <a href="https://twitter.com/RAPP" target="_blank" alias=""><img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/470de26b-d0b7-4b0e-98c7-32f6f8c28f60.jpg" alt="Twitter" width="33" /></a>
+                                                                            <a href="https://twitter.com/RAPP"
+                                                                                target="_blank" alias=""><img
+                                                                                    src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/470de26b-d0b7-4b0e-98c7-32f6f8c28f60.jpg"
+                                                                                    alt="Twitter" width="33" /></a>
                                                                         </td>
                                                                         <td>
-                                                                            <a href="https://www.instagram.com/rappworldwide/" target="_blank" alias=""><img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/be57219d-7df9-4c87-ac1e-fdcfda8f5b60.jpg" alt="Instagram" width="33" /></a>
+                                                                            <a href="https://www.instagram.com/rappworldwide/"
+                                                                                target="_blank" alias=""><img
+                                                                                    src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/be57219d-7df9-4c87-ac1e-fdcfda8f5b60.jpg"
+                                                                                    alt="Instagram" width="33" /></a>
                                                                         </td>
                                                                         <td>
-                                                                            <a href="https://www.linkedin.com/company/rapp/" target="_blank" alias=""><img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/2477110a-bf48-41f8-9486-5755710ca65a.jpg" alt="LinkedIn" width="33" /></a>
+                                                                            <a href="https://www.linkedin.com/company/rapp/"
+                                                                                target="_blank" alias=""><img
+                                                                                    src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/2477110a-bf48-41f8-9486-5755710ca65a.jpg"
+                                                                                    alt="LinkedIn" width="33" /></a>
                                                                         </td>
                                                                     </tr>
                                                                 </table>
@@ -1054,7 +1181,8 @@
                                             <!-- END Two column layout -->
                                             <!-- Empty Divider -->
                                             <tr>
-                                                <td align="center" class="space-divider"  style="font-size: 15px !important; height: 15px !important; line-height: 15px !important;">
+                                                <td align="center" class="space-divider"
+                                                    style="font-size: 15px !important; height: 15px !important; line-height: 15px !important;">
                                                     &nbsp;
                                                 </td>
                                             </tr>
@@ -1066,7 +1194,8 @@
 
                                 <!-- Empty Divider -->
                                 <tr>
-                                    <td align="center" class="space-divider"  style="font-size: 20px !important; height: 20px !important; line-height: 20px !important;">
+                                    <td align="center" class="space-divider"
+                                        style="font-size: 20px !important; height: 20px !important; line-height: 20px !important;">
                                         &nbsp;
                                     </td>
                                 </tr>
@@ -1075,9 +1204,12 @@
                                 <!-- Legal -->
                                 <tr>
                                     <td align="center">
-                                        <p class="copyright">RAPP is an Omnicom Company. &copy; 2020 RAPP. All rights reserved.</p class="copyright">
-                                        <p class="copyright">220 East 42nd Street, New York, NY 10017</p class="copyright">
-                                        <a href="http://cl.s4.exct.net/profile_center.aspx?qs=75cf2b6fe7ee762880f60bdf374b9f85369f5fbf1d9f637508d6a877bc537baa9410ae8b2c2ca3b995d48228147defc40e2e144f370a9fb6dc0d0122d27c2862f523d1a32922fb19" target="_blank" alias="" style="color:#000000;">
+                                        <p class="copyright">RAPP is an Omnicom Company. &copy; 2020 RAPP. All rights
+                                            reserved.</p class="copyright">
+                                        <p class="copyright">220 East 42nd Street, New York, NY 10017</p
+                                            class="copyright">
+                                        <a href="http://cl.s4.exct.net/profile_center.aspx?qs=75cf2b6fe7ee762880f60bdf374b9f85369f5fbf1d9f637508d6a877bc537baa9410ae8b2c2ca3b995d48228147defc40e2e144f370a9fb6dc0d0122d27c2862f523d1a32922fb19"
+                                            target="_blank" alias="" style="color:#000000;">
                                             <p class="copyright unsub">Update Profile</p class="copyright">
                                         </a>
                                     </td>
@@ -1088,12 +1220,13 @@
                     </tr>
                     <!-- END Body Content -->
                 </table>
-    <!-- Prevent Gmail on iOS font size manipulation -->
-    <div class="gmailfix" style="white-space:nowrap; font:15px courier; line-height:0;"> 
-        &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-    </div>
-    <!-- END Prevent Gmail on iOS font size manipulation -->
+                <!-- Prevent Gmail on iOS font size manipulation -->
+                <div class="gmailfix" style="white-space:nowrap; font:15px courier; line-height:0;">
+                    &nbsp; &nbsp;
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                </div>
+                <!-- END Prevent Gmail on iOS font size manipulation -->
 </body>
+
 </html>
