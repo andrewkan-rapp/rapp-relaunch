@@ -1,0 +1,990 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>RAPP - The Neighborhood</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <style type="text/css">
+        /*  
+            Custom Fonts
+                Fallbacks are in place
+                This is for all devices
+        */
+        @media screen {
+
+            @font-face {
+                font-family: 'DIN-Bold';
+                src: url('https://cdn.rapp.com/fonts/DINOffcPro%2DBold.eot?1555633958');
+                src: url('https://cdn.rapp.com/fonts/DINOffcPro%2DBold.eot?&1555633958#iefix') format('embedded-opentype'),
+                    url('https://cdn.rapp.com/fonts/DINOffcPro%2DBold.ttf?1555633958') format('truetype')
+            }
+
+            @font-face {
+                font-family: 'DIN-Regular';
+                src: url('https://cdn.rapp.com/fonts/DINOffcPro.eot?1555633958');
+                src: url('https://cdn.rapp.com/fonts/DINOffcPro.eot?&1555633958#iefix') format('embedded-opentype'),
+                    url('https://cdn.rapp.com/fonts/DINOffcPro.ttf?1555633958') format('truetype')
+            }
+
+            @font-face {
+                font-family: 'Helvetica-Bold';
+                src: local('Helvetica');
+                font-weight: bold;
+            }
+
+            @font-face {
+                font-family: 'Arial-Bold';
+                src: local('Arial');
+                font-weight: bold;
+            }
+
+            @font-face {
+                font-family: 'Helvetica-Italic';
+                src: local('Helvetica');
+                font-style: italic;
+                font-weight: normal;
+            }
+
+            @font-face {
+                font-family: 'Arial-Italic';
+                src: local('Arial');
+                font-style: italic;
+                font-weight: normal;
+            }
+        }
+        /* END Custom Fonts */
+
+        /* Outlook fix */
+        #outlook a {
+            padding: 0;
+        }
+
+        /* Force Outlook to provide a "view in browser" menu link. */
+        body {
+            width: 100% !important;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            font-family: 'DIN-Regular', 'Roboto', Arial, sans-serif;
+        }
+
+        img {
+            outline: none;
+            text-decoration: none;
+            -ms-interpolation-mode: bicubic;
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        a:-webkit-any-link {
+            text-decoration: none;
+        }
+
+        a img {
+            border: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        table td {
+            border-collapse: collapse;
+        }
+
+        table p {
+            line-height: 20px;
+            margin-bottom: 15px;
+        }
+
+        table a:-webkit-any-link {
+            text-decoration: underline;
+            color: #000000;
+        }
+
+        /* Force Hotmail to display emails at full width */
+        .ExternalClass {
+            width: 100%;
+        }
+
+        .ExternalClass,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td,
+        .ExternalClass div {
+            line-height: 100%;
+        }
+
+        .container {
+            margin: 0;
+            padding: 0;
+            width: 100% !important;
+            line-height: 100% !important;
+        }
+
+        .gmailfix {
+            display: none;
+            display: none !important;
+        }
+
+        /* Change mobile OS links to match style, keep outside of media query for tablets */
+        .unlink_text a:link,
+        .unlink_text a:visited,
+        .unlink_text a:hover,
+        .unlink_text a:focus,
+        .unlink_text a:active {
+            color: #000000 !important;
+            text-decoration: none !important;
+        }
+
+        .unlink_footer a {
+            color: #777777 !important;
+            text-decoration: none !important;
+        }
+
+        /* .preview_text {
+            display: none !important;
+        } */
+
+        /* .preview_text a {
+            color: #ffffff !important;
+            text-decoration: none !important;
+        } */
+
+        /* Outlook.com Image Fix */
+        [owa] div,
+        button {
+            margin: 0 !important;
+            padding: 0 !important;
+            display: block !important;
+        }
+
+        /* Outlook.com */
+        .ecxshow-mso {
+            display: block !important;
+            margin: 0;
+            padding: 0;
+            overflow: visible !important;
+            width: auto !important;
+            max-height: inherit !important;
+        }
+
+        /* Styles specific for which device the user is on */
+        .mobile {
+            display: none !important;
+        }
+
+        .desktop {
+            display: block !important;
+            margin: 0;
+            padding: 0;
+            overflow: visible !important;
+            width: auto !important;
+            max-height: inherit !important;
+        }
+
+        .responsive-img {
+            width: 100%;
+        }
+
+        /* END Styles specific for which device the user is on */
+
+        /***************************************************
+        ****************************************************
+            GLOBAL STYLES
+                Desktop First Method
+                Add your desktop styling here!
+                Author styles
+        ****************************************************
+        ***************************************************/
+
+        .space-divider {
+            font-size: 30px;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .copyright {
+            font-size: 12px;
+            line-height: 16px;
+            margin-bottom: 0;
+        }
+
+        .unsub {
+            margin-top: 20px;
+        }
+
+        .sub-headline {
+            font-family: 'DIN-Bold', 'Roboto', Arial Bold, sans-serif;
+            font-weight: 700;
+            margin: 0;
+            line-height: 27px;
+            margin-bottom: 15px;
+        }
+
+        .emp {
+            font-family: 'DIN-Bold', 'Roboto', Arial Bold, sans-serif;
+            font-weight: 700;
+            margin-bottom: 0;
+        }
+
+        .story {
+            margin-bottom: 10px;
+        }
+
+        .external-links ul {
+            padding-inline-start: 24px;
+        }
+
+        .external-links ul li {
+            margin-bottom: 5px;
+        }
+
+        .external-links ul li:last-child {
+            margin-bottom: 0;
+        }
+
+        .sub-list {
+            padding-inline-start: 16px;
+        }
+
+        .sub-list li {
+            margin-bottom: 20px;
+        }
+
+        .sub-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        /***************************************************
+        ****************************************************
+            TABLET STYLES
+                Add your tablet styling here!
+                Override the desktop styles
+                This is basically to load the fonts specifically on tablet devices that have issues loading the fonts
+                TODO: Need to check if this is necessary or not
+        ****************************************************
+        ***************************************************/
+
+        /* Tablet Resolution - based on iPad  */
+        @media only screen and (width: 768px) and (height: 1024px) and (orientation: portrait),
+        screen and (height: 768px) and (width: 1024px) and (orientation: landscape) {
+            p {
+                font-family: 'DIN-Regular', 'Roboto', Arial, sans-serif !important;
+            }
+
+            h2,
+            strong.bold {
+                font-family: 'DIN-Bold', 'Roboto', 'Arial-Bold', sans-serif !important;
+                font-weight: 700 !important;
+            }
+
+            em {
+                font-family: 'DIN-Regular', 'Roboto', 'Arial-Italic', sans-serif !important;
+                font-style: normal !important;
+            }
+        }
+
+        /***************************************************
+        ****************************************************
+            MOBILE STYLES
+                Add your mobile styling here!
+                Override the desktop styles
+                This is an adaptive layout, so the layout changes to 320px width
+                Author styles
+        ****************************************************
+        ***************************************************/
+
+        @media screen and (max-width: 615px) {
+
+            /* Resets */
+            body {
+                line-height: 100% !important;
+            }
+
+            /* Responsive styling */
+            .desktop {
+                display: none !important;
+            }
+
+            .mobile {
+                display: block !important;
+                margin: 0;
+                padding: 0;
+                overflow: visible !important;
+                width: auto !important;
+                max-height: inherit !important;
+            }
+
+            /* END Responsive styling */
+
+            .full_width {
+                width: 320px !important;
+                min-width: 320px !important;
+            }
+
+            .sub-story-width {
+                width: 280px !important;
+                min-width: 280px !important;
+            }
+
+            .full_bleed {
+                width: 360px !important;
+                min-width: 360px !important;
+            }
+
+            .full_img {
+                width: 320px;
+            }
+
+            .preheader_links_wrap {
+                line-height: 100% !important;
+            }
+
+            .preheader_links {
+                line-height: inherit !important;
+            }
+
+            .mobile_wrap {
+                white-space: nowrap !important;
+            }
+
+            /* .responsive-img {
+                width: 100%;
+            } */
+
+            /* END Resets */
+
+            /* Author Styles */
+            .left-col,
+            .right-col {
+                width: 100%;
+            }
+
+            .left-col {
+                margin-bottom: 20px;
+            }
+
+            .footer-left,
+            .footer-right {
+                width: 100%;
+                text-align: center;
+            }
+
+            .footer-left td {
+                padding-bottom: 5px;
+            }
+
+            .footer-right td {
+                padding-top: 0;
+            }
+
+            .footer-content {
+                margin: auto;
+            }
+
+            .center {
+                margin: auto;
+            }
+
+            .external-links ul {
+                padding-inline-start: 13px;
+            }
+
+            .external-links ul li {
+                font-size: 12px;
+                margin-bottom: 0;
+            }
+
+            .copyright {
+                font-size: 11px;
+            }
+
+            .button {
+                margin: auto;
+            }
+
+            /* END Author Styles */
+        }
+    </style>
+    <!--
+        Outlook Styling
+            Loads these styles only if the user is using an Outlook email client
+    -->
+
+    <!--[if gte mso 16]>
+    <style>
+    
+        /* Target Outlook 2010+ */
+        .kbb_text_column_wrap { padding: 30px 15px !important; }
+
+    </style>
+    <![endif]-->
+
+    <!--[if mso]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]-->
+
+    <!--[if gte mso 14]>
+    <style>     
+
+        /* Target Outlook 2010+ */
+        /* Reset */
+        p sup {
+            vertical-align: top;
+            position: relative;
+            top: -0.4em;
+            font-size: 80%;
+        }
+        .show-mso {
+            display: block !important;
+            margin: 0;
+            padding: 0;
+            overflow : visible !important;
+            width: auto !important;
+            max-height: inherit !important;
+        }
+        /* END Reset */
+
+        /* Created class to limit the height because Outlook rendered a larger height */
+        /* Author Styles */
+        .height-o {
+            font-size: 1px !important;
+            height: 1px !important;
+            line-height: 1px !important;
+        }
+
+    </style>
+    <![endif]-->
+
+    <!--
+        END Outlook Styling
+    -->
+</head>
+
+<body style="font-family:'DIN-Regular', 'Roboto', Arial, sans-serif;">
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#eeeeee" class="container"
+        style="table-layout:fixed;">
+
+        <!-- Preview Text -->
+        <tr>
+            <td>
+                <div style="display:none;">
+                    <span
+                        style="font-family:'DIN-Regular', 'Roboto', Arial, sans-serif;font-size:1px;line-height:1px;color:#ffffff;">
+                        See what's new in the neighborhood.
+                    </span>
+                </div>
+                <div style="display: none; max-height: 0px; overflow: hidden;">
+                    &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+                </div>
+            </td>
+        </tr>
+
+        <!-- Animated Hero Image -->
+        <tr>
+            <td align="center">
+                <table width="600" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" class="full_width full_bleed">
+                    <tr>
+                        <td align="center">
+                            <!-- Outlook fallback / Static Image -->
+                            <div style="display:none;width:0px;max-height:0px;overflow:hidden;"
+                                class="show-mso">
+                                <a href="#" target="_blank">
+                                    <img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/211b6465-b80e-4d33-afab-0ed09025dae8.jpg" width="600" alt="Happy Holidays" class="responsive-img" />
+                                </a>
+                            </div>
+                            <!--[if !mso]><!-->
+                            <a href="#" target="_blank">
+                                <img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/9a689dc5-68bd-4f02-864f-9a71b632dad5.gif" width="600" alt="Happy Holidays" class="responsive-img" />
+                            </a>
+                            <!--<![endif]-->
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- Hero Image -->
+        <tr>
+            <td align="center">
+                <table width="600" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" class="full_width full_bleed">
+                    <tr>
+                        <td>
+                            <img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/3a522acc-cea5-4b10-9a6b-b8d01e492ef9.png" width="600" alt="Neighborhood" class="responsive-img" />
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- END Hero Image -->
+
+        <tr>
+            <td align="center">
+                <table width="600" cellpadding="20" cellspacing="0" border="0" bgcolor="#ffffff" class="full_width">
+                    <!-- Body Content -->
+                    <tr>
+                        <td align="center">
+                            <table cellpadding="0" cellspacing="0" border="0" class="full_width">
+                                <!-- Main Story -->
+                                <tr>
+                                    <td>
+                                        <img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/a35a6f6d-2ae6-4e06-995a-c6444bbe1ca1.png" width="560"
+                                            alt="" class="responsive-img story" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <table cellpadding="10" cellspacing="0" border="0" align="middle"
+                                            style="border-collapse:collapse;">
+                                            <tr>
+                                                <td>
+                                                    <h2 class="sub-headline">
+                                                        HEADLINE IS IN ALL CAPS DIN AND VERY SHORT.
+                                                    </h2>
+                                                    <p>
+                                                        Sub copy to support the headline will be in sentence case and should be at or around 45 words or 150 characters  to encourage the user to click into it.
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <div>
+                                            <!--[if mso]>
+                                            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#" style="height:40px;v-text-anchor:middle;width:150px;" arcsize="0" stroke="f" fillcolor="#000000">
+                                            <w:anchorlock/>
+                                            <center style="color:#ffffff;font-family:sans-serif;font-size:16px;font-weight:bold;">
+                                                CTA
+                                            </center>
+                                            </v:roundrect>
+                                            <![endif]-->
+                                            <![if !mso]>
+                                            <table cellspacing="0" cellpadding="0" align="center">
+                                                <tr> 
+                                                    <td align="center" width="150" height="40" bgcolor="#000000" style="color: #ffffff; display: block;">
+                                                        <a href="#" style="font-size:16px; font-weight: bold; font-family:sans-serif; text-decoration: none; line-height:40px; width:100%; display:inline-block;">
+                                                            <span style="color: #ffffff;">
+                                                                CTA
+                                                            </span>
+                                                        </a>
+                                                    </td> 
+                                                </tr> 
+                                            </table> 
+                                            <![endif]>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- END Main Story -->
+
+                                <!-- Empty Divider -->
+                                <tr>
+                                    <td align="center" class="space-divider"
+                                        style="font-size: 30px !important; height: 30px !important; line-height: 30px !important;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <!-- END Empty Divider -->
+
+                                <!-- Sub Story 1 -->
+                                <tr>
+                                    <td align="center">
+                                        <table width="100%" cellpadding="0" cellspacing="0" border="0"
+                                            class="full_width sub-story-width">
+                                            <!-- Two column layout -->
+                                            <tr>
+                                                <td>
+                                                    <!--[if (gte mso 9)|(IE)]>
+                                                    <table width="560" align="center">
+                                                        <tr>
+                                                        <td width="260">
+                                                        <![endif]-->
+                                                    <table align="left" width="260" cellpadding="0" cellspacing="0"
+                                                        border="0" class="left-col">
+                                                        <tr>
+                                                            <td>
+                                                                <img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/50a37940-54a0-420f-905a-55f7be72afff.png"
+                                                                    width="260" class="responsive-img sub-story" />
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <!--[if (gte mso 9)|(IE)]>
+                                                    </td>
+                                                    <td width="280">
+                                                    <![endif]-->
+                                                    <table align="right" width="280" cellpadding="0" cellspacing="0"
+                                                        border="0" class="right-col">
+                                                        <tr>
+                                                            <td>
+                                                                <h2 class="sub-headline">HEADLINE IS IN ALL CAPS DIN AND VERY SHORT.</h2>
+                                                                <p>
+                                                                    Sub copy to support the headline will be in sentence case and should be at or around 45 words or 150 characters  to encourage the user to click into it.    
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left">
+                                                                <div>
+                                                                    <!--[if mso]>
+                                                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#" style="height:40px;v-text-anchor:middle;width:150px;" arcsize="0" stroke="f" fillcolor="#000000">
+                                                                    <w:anchorlock/>
+                                                                    <center style="color:#ffffff;font-family:sans-serif;font-size:16px;font-weight:bold;">
+                                                                        CTA
+                                                                    </center>
+                                                                    </v:roundrect>
+                                                                    <![endif]-->
+                                                                    <![if !mso]>
+                                                                    <table cellspacing="0" cellpadding="0" style="text-align: left;" class="button">
+                                                                        <tr> 
+                                                                            <td align="center" width="150" height="40" bgcolor="#000000" style="color: #ffffff; display: block;">
+                                                                                <a href="#" style="font-size:16px; font-weight: bold; font-family:sans-serif; text-decoration: none; line-height:40px; width:100%; display:inline-block;">
+                                                                                    <span style="color: #ffffff;">
+                                                                                        CTA
+                                                                                    </span>
+                                                                                </a>
+                                                                            </td> 
+                                                                        </tr> 
+                                                                    </table> 
+                                                                    <![endif]>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <!--[if (gte mso 9)|(IE)]>
+                                                    </td>
+                                                    </tr>
+                                                    </table>
+                                                    <![endif]-->
+                                                </td>
+                                            </tr>
+                                            <!-- END Two column layout -->
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- END Sub Story 1 -->
+
+                                <!-- Empty Divider -->
+                                <tr>
+                                    <td align="center" class="space-divider"
+                                        style="font-size: 30px !important; height: 30px !important; line-height: 30px !important;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <!-- END Empty Divider -->
+
+                                <!-- Sub Story 2 -->
+                                <tr>
+                                    <td align="center">
+                                        <table width="100%" cellpadding="0" cellspacing="0" border="0" dir="rtl"
+                                            class="full_width sub-story-width" style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; ">
+                                            <!-- Two column layout -->
+                                            <tr>
+                                                <td>
+                                                    <!--[if (gte mso 9)|(IE)]>
+                                                    <table width="560" align="center">
+                                                        <tr>
+                                                        <td width="260">
+                                                        <![endif]-->
+                                                    <table align="right" width="260" cellpadding="0" cellspacing="0"
+                                                        border="0" dir="ltr" class="left-col">
+                                                        <tr>
+                                                            <td>
+                                                                <img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/50a37940-54a0-420f-905a-55f7be72afff.png"
+                                                                    width="260" class="responsive-img sub-story" />
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <!--[if (gte mso 9)|(IE)]>
+                                                    </td>
+                                                    <td width="280">
+                                                    <![endif]-->
+                                                    <table align="left" width="280" cellpadding="0" cellspacing="0"
+                                                        border="0" dir="ltr" class="right-col">
+                                                        <tr>
+                                                            <td>
+                                                                <h2 class="sub-headline">HEADLINE IS IN ALL CAPS DIN AND VERY SHORT.</h2>
+                                                                <p>
+                                                                    Sub copy to support the headline will be in sentence case and should be at or around 45 words or 150 characters  to encourage the user to click into it.    
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left">
+                                                                <div>
+                                                                    <!--[if mso]>
+                                                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#" style="height:40px;v-text-anchor:middle;width:150px;" arcsize="0" stroke="f" fillcolor="#000000">
+                                                                    <w:anchorlock/>
+                                                                    <center style="color:#ffffff;font-family:sans-serif;font-size:16px;font-weight:bold;">
+                                                                        CTA
+                                                                    </center>
+                                                                    </v:roundrect>
+                                                                    <![endif]-->
+                                                                    <![if !mso]>
+                                                                    <table cellspacing="0" cellpadding="0" style="text-align: left;" class="button">
+                                                                        <tr> 
+                                                                            <td align="center" width="150" height="40" bgcolor="#000000" style="color: #ffffff; display: block;">
+                                                                                <a href="#" style="font-size:16px; font-weight: bold; font-family:sans-serif; text-decoration: none; line-height:40px; width:100%; display:inline-block;">
+                                                                                    <span style="color: #ffffff;">
+                                                                                        CTA
+                                                                                    </span>
+                                                                                </a>
+                                                                            </td> 
+                                                                        </tr> 
+                                                                    </table> 
+                                                                    <![endif]>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <!--[if (gte mso 9)|(IE)]>
+                                                    </td>
+                                                    </tr>
+                                                    </table>
+                                                    <![endif]-->
+                                                </td>
+                                            </tr>
+                                            <!-- END Two column layout -->
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- END Sub Story 2 -->
+
+                                <!-- Empty Divider -->
+                                <tr>
+                                    <td align="center" class="space-divider"
+                                        style="font-size: 30px !important; height: 30px !important; line-height: 30px !important;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <!-- END Empty Divider -->
+
+                                <!-- Sub Story 3 -->
+                                <tr>
+                                    <td align="center">
+                                        <table width="100%" cellpadding="0" cellspacing="0" border="0"
+                                            class="full_width sub-story-width">
+                                            <!-- Two column layout -->
+                                            <tr>
+                                                <td>
+                                                    <!--[if (gte mso 9)|(IE)]>
+                                                    <table width="560" align="center">
+                                                        <tr>
+                                                        <td width="260">
+                                                        <![endif]-->
+                                                    <table align="left" width="260" cellpadding="0" cellspacing="0"
+                                                        border="0" class="left-col">
+                                                        <tr>
+                                                            <td align="center">
+                                                                <!-- Outlook fallback / Static Image -->
+                                                                <div style="display:none;width:0px;max-height:0px;overflow:hidden;"
+                                                                    class="show-mso">
+                                                                    <a href="#" target="_blank">
+                                                                        <img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/211b6465-b80e-4d33-afab-0ed09025dae8.jpg" width="260" alt="" class="responsive-img sub-story" />
+                                                                    </a>
+                                                                </div>
+                                                                <!--[if !mso]><!-->
+                                                                <a href="#" target="_blank">
+                                                                    <img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/9a689dc5-68bd-4f02-864f-9a71b632dad5.gif" width="260" alt="" class="responsive-img sub-story" />
+                                                                </a>
+                                                                <!--<![endif]-->
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <!--[if (gte mso 9)|(IE)]>
+                                                    </td>
+                                                    <td width="280">
+                                                    <![endif]-->
+                                                    <table align="right" width="280" cellpadding="0" cellspacing="0"
+                                                        border="0" class="right-col">
+                                                        <tr>
+                                                            <td>
+                                                                <h2 class="sub-headline">HEADLINE IS IN ALL CAPS DIN AND VERY SHORT.</h2>
+                                                                <p>
+                                                                    Sub copy to support the headline will be in sentence case and should be at or around 45 words or 150 characters  to encourage the user to click into it.    
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left">
+                                                                <div>
+                                                                    <!--[if mso]>
+                                                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#" style="height:40px;v-text-anchor:middle;width:150px;" arcsize="0" stroke="f" fillcolor="#000000">
+                                                                    <w:anchorlock/>
+                                                                    <center style="color:#ffffff;font-family:sans-serif;font-size:16px;font-weight:bold;">
+                                                                        CTA
+                                                                    </center>
+                                                                    </v:roundrect>
+                                                                    <![endif]-->
+                                                                    <![if !mso]>
+                                                                    <table cellspacing="0" cellpadding="0" style="text-align: left;" class="button">
+                                                                        <tr> 
+                                                                            <td align="center" width="150" height="40" bgcolor="#000000" style="color: #ffffff; display: block;">
+                                                                                <a href="#" style="font-size:16px; font-weight: bold; font-family:sans-serif; text-decoration: none; line-height:40px; width:100%; display:inline-block;">
+                                                                                    <span style="color: #ffffff;">
+                                                                                        CTA
+                                                                                    </span>
+                                                                                </a>
+                                                                            </td> 
+                                                                        </tr> 
+                                                                    </table> 
+                                                                    <![endif]>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <!--[if (gte mso 9)|(IE)]>
+                                                    </td>
+                                                    </tr>
+                                                    </table>
+                                                    <![endif]-->
+                                                </td>
+                                            </tr>
+                                            <!-- END Two column layout -->
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- END Sub Story 3 -->
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- END Body Content -->
+                </table>
+                <!-- Footer -->
+                <table width="600" cellpadding="0" cellspacing="0" border="0" class="full_width full_bleed">
+                    <!-- Empty Divider with background color -->
+                    <tr>
+                        <td align="center" class="space-divider height-o"
+                            style="font-size: 5px; height: 5px; line-height: 5px; background-color: #ff6500;">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <!-- END Empty Divider -->
+
+                    <!-- Footer Content -->
+                    <tr>
+                        <td>
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0"
+                                style="background-color: #eeeeee;">
+                                <!-- Two column layout -->
+                                <tr>
+                                    <td>
+                                        <!--[if (gte mso 9)|(IE)]>
+                                        <table width="600" align="center">
+                                            <tr>
+                                            <td width="300">
+                                            <![endif]-->
+                                        <table align="left" width="280" cellpadding="20" cellspacing="0"
+                                            border="0" class="footer-left">
+                                            <tr>
+                                                <td>
+                                                    <a href="https://www.rapp.com" target="_blank"
+                                                        style="text-decoration: none;">
+                                                        <img src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/fd5b4d94-6a64-4044-a6c9-5f5e2af57e43.png"
+                                                            alt="RAPP" width="150" />
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!--[if (gte mso 9)|(IE)]>
+                                        </td>
+                                        <td width="300">
+                                        <![endif]-->
+                                        <table align="right" width="280" cellpadding="12" cellspacing="0"
+                                            border="0" class="footer-right">
+                                            <tr>
+                                                <td align="right">
+                                                    <table cellpadding="5" cellspacing="0" border="0"
+                                                        class="footer-content">
+                                                        <tr>
+                                                            <td>
+                                                                <a href="https://www.facebook.com/RAPPWORLDWIDE/"
+                                                                    target="_blank" alias=""><img
+                                                                        src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/799e5aad-d9fe-4981-8341-85766fc62d2a.jpg"
+                                                                        alt="Facebook" width="33" /></a>
+                                                            </td>
+                                                            <td>
+                                                                <a href="https://twitter.com/RAPP"
+                                                                    target="_blank" alias=""><img
+                                                                        src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/470de26b-d0b7-4b0e-98c7-32f6f8c28f60.jpg"
+                                                                        alt="Twitter" width="33" /></a>
+                                                            </td>
+                                                            <td>
+                                                                <a href="https://www.instagram.com/rappworldwide/"
+                                                                    target="_blank" alias=""><img
+                                                                        src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/be57219d-7df9-4c87-ac1e-fdcfda8f5b60.jpg"
+                                                                        alt="Instagram" width="33" /></a>
+                                                            </td>
+                                                            <td>
+                                                                <a href="https://www.linkedin.com/company/rapp/"
+                                                                    target="_blank" alias=""><img
+                                                                        src="https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/2477110a-bf48-41f8-9486-5755710ca65a.jpg"
+                                                                        alt="LinkedIn" width="33" /></a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!--[if (gte mso 9)|(IE)]>
+                                        </td>
+                                        </tr>
+                                        </table>
+                                        <![endif]-->
+                                    </td>
+                                </tr>
+                                <!-- END Two column layout -->
+                                <!-- Empty Divider -->
+                                <tr>
+                                    <td align="center" class="space-divider"
+                                        style="font-size: 15px !important; height: 15px !important; line-height: 15px !important;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <!-- END Empty Divider -->
+                                <!-- Legal -->
+                                <tr>
+                                    <td align="center">
+                                        <p class="copyright">RAPP is an Omnicom Company. &copy; 2020 RAPP. All rights
+                                            reserved.</p class="copyright">
+                                        <p class="copyright">220 East 42nd Street, New York, NY 10017</p
+                                            class="copyright">
+                                        <!-- <a href="http://cl.s4.exct.net/profile_center.aspx?qs=75cf2b6fe7ee762880f60bdf374b9f85369f5fbf1d9f637508d6a877bc537baa9410ae8b2c2ca3b995d48228147defc40e2e144f370a9fb6dc0d0122d27c2862f523d1a32922fb19"
+                                            target="_blank" alias="" style="color:#000000;">
+                                            <p class="copyright unsub">Update Profile</p class="copyright">
+                                        </a> -->
+                                    </td>
+                                </tr>
+                                <!-- END Legal -->
+                                <!-- Empty Divider -->
+                                <tr>
+                                    <td align="center" class="space-divider"
+                                        style="font-size: 30px !important; height: 30px !important; line-height: 30px !important;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <!-- END Empty Divider -->
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- END Footer Content -->
+                </table>
+                <!-- END Footer -->
+                <!-- Prevent Gmail on iOS font size manipulation -->
+                <div class="gmailfix" style="white-space:nowrap; font:15px courier; line-height:0;">
+                    &nbsp; &nbsp;
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                </div>
+                <!-- END Prevent Gmail on iOS font size manipulation -->
+</body>
+
+</html>
