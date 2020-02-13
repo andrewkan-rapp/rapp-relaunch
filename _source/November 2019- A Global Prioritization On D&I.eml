@@ -1,0 +1,1302 @@
+Received: from LNXP265MB1660.GBRP265.PROD.OUTLOOK.COM (2603:10a6:600:a0::27)
+ by LNXP265MB1642.GBRP265.PROD.OUTLOOK.COM with HTTPS via
+ LO2P265CA0423.GBRP265.PROD.OUTLOOK.COM; Tue, 26 Nov 2019 15:01:38 +0000
+Received: from LO2P265CA0014.GBRP265.PROD.OUTLOOK.COM (2603:10a6:600:62::26)
+ by LNXP265MB1660.GBRP265.PROD.OUTLOOK.COM (2603:10a6:600:84::19) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2474.17; Tue, 26 Nov
+ 2019 15:01:37 +0000
+Received: from HE1EUR01FT049.eop-EUR01.prod.protection.outlook.com
+ (2a01:111:f400:7e1f::202) by LO2P265CA0014.outlook.office365.com
+ (2603:10a6:600:62::26) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2474.17 via Frontend
+ Transport; Tue, 26 Nov 2019 15:01:37 +0000
+Authentication-Results: spf=fail (sender IP is 148.163.159.174)
+ smtp.mailfrom=bounce.s4.exacttarget.com; rapp.com; dkim=none (message not
+ signed) header.d=none;rapp.com; dmarc=none action=none
+ header.from=rapp.com;compauth=pass reason=704
+Received-SPF: Fail (protection.outlook.com: domain of
+ bounce.s4.exacttarget.com does not designate 148.163.159.174 as permitted
+ sender) receiver=protection.outlook.com; client-ip=148.163.159.174;
+ helo=mx0b-00291001.pphosted.com;
+Received: from mx0b-00291001.pphosted.com (148.163.159.174) by
+ HE1EUR01FT049.mail.protection.outlook.com (10.152.0.221) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2474.17 via Frontend Transport; Tue, 26 Nov 2019 15:01:36 +0000
+Received: from pps.filterd (m0098275.ppops.net [127.0.0.1])
+	by mx0b-00291001.pphosted.com (8.16.0.42/8.16.0.42) with SMTP id xAQF0ktG058312
+	for <Jenna.Wengler@rapp.com>; Tue, 26 Nov 2019 15:01:34 GMT
+Authentication-Results-Original: ppops.net;	spf=pass
+ smtp.mailfrom=bounce-68169_HTML-147638392-5414733-1061346-3@bounce.s4.exacttarget.com;
+	dmarc=none
+Received: from bh63.mta.exacttarget.com (bh63.mta.exacttarget.com [68.232.207.63])
+	by mx0b-00291001.pphosted.com with ESMTP id 2weww1p7kj-8
+	(version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT)
+	for <Jenna.Wengler@rapp.com>; Tue, 26 Nov 2019 15:01:32 +0000
+Received: by bh63.mta.exacttarget.com id hrkv4o2fmd4f for <Jenna.Wengler@rapp.com>; Tue, 26 Nov 2019 15:00:47 +0000 (envelope-from <bounce-68169_HTML-147638392-5414733-1061346-3@bounce.s4.exacttarget.com>)
+From: "Global Network News" <globalnetworknews@rapp.com>
+To: <Jenna.Wengler@rapp.com>
+Subject: November 2019: A Global Prioritization On D&I
+Date: Tue, 26 Nov 2019 09:00:47 -0600
+List-Unsubscribe: <mailto:leave-fcdd127874620d122d502d29-fe24157472620775761d72-fe9411747460037e76-fe9a15707365077973-ffcc17@leave.s4.exacttarget.com>
+List-ID: <1061346.xt.local>
+X-CSA-Complaints: whitelistcomplaints@eco.de
+x-job: 1061346_5414733
+Message-ID: <957b4b34-60e5-4fb9-946b-4053ea7b4f01@xtnvmta4524.xt.local>
+X-CLX-Shades: Deliver
+X-CLX-Response: 1TFkXGxoaGhEKTHoXGxoaGhEKWUQXa34YfxtkARJ/W1ARClhYF214b0h6RRl ERWBDEQp4ThdjHFxFHGl/f3x+fBEKeUwXehptQWgdH2IFU2YRCnlDF29QWE5aSE5IY0RfEQpDSB cHHhsTEQpDWRcfHxEKWU0Xbk9GQ1xPWBEKX1kXGRIfEQpfTRdnZnIRCllJFxpxGhAadwYYHh9xG
+ BIaEBp3BhgaBhsYGhEKWV4XaG55EQpJRhdFR0RDSUVHTktZSU5ZdUJFWV5PThEKQ04XeE9vXFNc cHhHE3VHXRhTEmxafWdgExJOT04HeHNEWHIRClhcFx8EGgQbEh0HE0wcSx8dSRoFGxoEGxsaBB8 aBBseGBAbHhofGhEKXlkXfG9fZkURCk1cFx4dGhEKTFoXaWttTU1dEQpCTxdnZBJoRR95AQVhTB
+ EKQ1oXHBIEGBkYBBgaHQQcGREKQl4XGxEKWUUXExEKRUkXGxEKRWYXHhEKQkYXbGtwT19DXHtLf XgRCkJHF2BjTX1nAQF8SG19EQpCXBcaEQpCRRdsRB5wHFlFUH1NbhEKQk4XYxxcRRxpf398fnwR CkJMF214b0h6RRlERWBDEQpCbBdrXxJ5E0t6eWtsBREKQkAXYB5pGENObV5BR0gRCkJYF2Z6c1J
+ wfntwQB9vEQpaWBccEQpwZxdnUBxoG2xuWnNCGhAZGhEKcGgXZ1x9X0FnU20TEh0QGRoRCnBoF2 VSXF1YYGxcSxNPEBkaEQpwaBdkQ31sblNsT2lDExAZGhEKcGgXYVJsfxtuQgVhGmkQGRoRCnBoF 2FEe25tGkBcUkdcEBkaEQpwfRdgTW5kb2tPQEZYXBAaEQpwfRdmUkFNTVhBZG0eXRAaEQpwfRdr
+ TBp+RlBdUmBvSxAaEQpwfRdlRXlyUx1jaX0STBAaEQpwfRdoX0hHeEASTG5leBAaEQpwfRdsGGV Mck5gbQVvUxAaEQpwfRdkc19pfnJAe3gbfxAaEQpwfRdoGHoFGGZmQRtkGxAaEQpwfRdhHU9cY3 pfGWAFExAaEQpwfRdjbAV7TGNcYmNFXRAaEQpwfRduHW9HQFNjUERvQxAaEQpwfRdiRRIfTlh/X
+ x1YEhAaEQpwfRdsc04Tf1xGSGRyZBAaEQpwfRdjZ0EBYUJrU2JlYBAaEQpwfRdlGntmQXtiARt8 UhAaEQpwfRdhQUYZcH1ofE5MaxAaEQpwfRdkemlJThhmHmhGEhAaEQpwfRdjZ0xSUEtteWZmbRA ZGhEKcH0Xb38YWUBHc08bZE4QGRoRCnB9F2R8GEZgaWdZGlMZEBkaEQpwfxdlclpFQEFSU18YZx
+ AbGxgRCnBfF2t/c2ZSc0BLemRyEBsaHREKcH8Xa3tgHk1QYxNfTEUQGxgbEQpwXxdgfH9BGH1NU AUBexAbGBoRCnBfF2wfGXNaZXNHcHpYEB0aEQpwfxdjZGNZYk9dGmZnRxAbGxsRCnBfF2xhZkxe a05FeH9dEBsaGhEKcGwXa0tFR1xEQHNZcnAQGRoRCm1+FxoRClhNF0sRIA==
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10434:6.0.95,18.0.572
+ definitions=2019-11-26_03:2019-11-26,2019-11-26 signatures=0
+X-Proofpoint-Spam-Reason: safe
+X-Proofpoint-CDS-Processed: true
+Return-Path:
+ bounce-68169_HTML-147638392-5414733-1061346-3@bounce.s4.exacttarget.com
+X-MS-Exchange-Organization-ExpirationStartTime: 26 Nov 2019 15:01:37.0329
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 74b03bae-2644-4c62-248d-08d7728188f5
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 1117898f-3bcb-4d2e-8c4f-eef601ae95c7:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+ CIP:148.163.159.174;IPV:NLI;CTRY:US;EFV:NLI;SFV:SKN;SFS:;DIR:INB;SFP:;SCL:-1;SRVR:LNXP265MB1660;H:mx0b-00291001.pphosted.com;FPR:;SPF:None;LANG:en;
+X-MS-Exchange-Organization-AuthSource:
+ HE1EUR01FT049.eop-EUR01.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 74b03bae-2644-4c62-248d-08d7728188f5
+X-MS-TrafficTypeDiagnostic: LNXP265MB1660:
+X-MS-Exchange-PUrlCount: 34
+X-MS-Exchange-Organization-SCL: -1
+X-MS-Oob-TLC-OOBClassifiers: OLM:6108;
+X-Microsoft-Antispam: BCL:0;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 26 Nov 2019 15:01:36.6135
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 74b03bae-2644-4c62-248d-08d7728188f5
+X-MS-Exchange-CrossTenant-Id: 1117898f-3bcb-4d2e-8c4f-eef601ae95c7
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: LNXP265MB1660
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.8542968
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2474.022
+X-Microsoft-Antispam-Mailbox-Delivery:
+ ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(750127)(520011016)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info:
+ AlnMwrBZ+OBnhjMAfGpSeXZ1k0+KB8GbzEXa2GdbVvMOnpHVym/DMgs7AN4x5Q2xEsnvqet2oLeBASJIBUzOn7zNxJRzYnsHDhV8DmCT9lzaFv//bcVTuCQ+D4eaEio2gTYbpDE1pweCi4UgI2JioOf9lQs5FGoCmKlVgeYqeMn+K/4ey3ClDo/yONmliS9PFcarODT8L9VMIy5hJgh4VI9LegsekTrJHJA1DqC9AKdvqpkhROdbLOH7OYWi667LPU5fgWR3KzRArMLf80KzenFu8bwL7irfWMevpXf5f5PeLWuLaPb6AvQ/2ACLrRjisrWUkF40wS4g7J81pzfSvYMPw8nCpzrWPH0T7PWjGzHdXOAVImOurWwqEvwnca2994pIh8RzoNhuhZbzFx8HkNm4vmikdzB5RBYXIvOzKyYgyKregRWdaiRD6OM+dVQ5dyPawshafVwHSMShmQe9Je/9gtkAwIdAglVzX529plRiGWa43g9vMmHHWm0wHmM2bciO5BBeABulFOzFRhQEeO3cofl0uKSCAVX/aNLsFrQ5qJCru6QiCpZX63g/2IM+EsevpdBRkcfXqWIH3rdIaqOlRK/6g7uiqOFUHoNf/uc3fIkqgQ0bS9XzqfhKa/LoccGsMPJTncwzchRs0LZ8rtEWeCSg0abvsEQk4otBB4Vs6QbyzGbJEoCzGf6InTNtFHujM9wK2vB+PoTHv4bhxP7jgkLYnEUF4/OoQHGanIE0zI43p4w984P7QJCvBGpNxybJwgO2swUK0mwDbT8ckP+AwovFR3tx51A7svmDE1mbC6ZNU4Jflpc/Rl4J2BeQtFJLa7+hHhMfZyVLne6/ZLO7YMj2NZMzgQNPuGFwK87ecPbrowjdGwnrmLdmsKGV/ifkpyJGDQLIjaXBi74QEA==
+Content-type: multipart/alternative;
+	boundary="B_3663051715_268333828"
+MIME-Version: 1.0
+
+--B_3663051715_268333828
+Content-type: text/plain;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+See what's happening in the global network this month.
+Things you need to know this month=20
+RAPP Monthly newsletter=20
+FIERCE WORK=20
+     =20
+TOYOTA BRINGS BACK  A BELOVED ICON=20
+
+RAPP LA helped Toyota write its next chapter in the story of the classic Su=
+pra, a darling of die-hard gearheads across the country. Supra's reappearanc=
+e, after an absence of almost 20 years, has brought general excitement to a =
+fever pitch.=20
+
+Using advanced modeling techniques to inform prioritized targeting strategi=
+es, a distinct tone of voice and design aesthetic were created for each audi=
+ence. To cut through the clutter, we used a combination of standout direct m=
+ail that featured a custom-printed  microfiber dashboard dusting cloth (gear=
+heads will understand why) and a limited-edition blueprint poster of the new=
+ Supra in all its stunning, athletic and sensuous glory. This was underpinne=
+d by a long-scroll, parallax landing page, where enthusiasts could get an in=
+sider's look at everything that makes the new GR Supra a legend reborn to be=
+ driven.=20
+
+ALL THINGS BUSINESS=20
+     =20
+RAPP COMMITS TO THE  VALUABLE 500=20
+
+As part of our global initiative to place diversity and inclusion at the fo=
+refront of what we do not only for clients, but for our people and local com=
+munities as well, RAPP Worldwide has pledged a commitment to The Valuable 50=
+0 =E2=80=94 an organization working to put disability on the business leadership a=
+genda.=20
+
+As part of this partnership, RAPP has committed to:=20
+Ensuring our agency continues to develop our fearless and inclusive culture=
+ and talent by welcoming, embracing and empowering everyone, including those=
+ with disabilities, and embracing all of their unique abilities as to inspir=
+e the best in our people and  our work.
+Advancing our organization's culture, training and priorities so that our p=
+olicies, practices and programs support and value people's differences and i=
+ntersectionalities so people have the understanding, respect and freedom to =
+express their points of view,  be provocative with new thinking and collabor=
+ate for innovation.
+Standing up for individuality and proudly sharing stories about what people=
+ are able to do here because they can bring their full selves to work =E2=80=94 an=
+d are supported with flexibility, brilliant colleagues, and the ability to d=
+o great work that benefits our  agency and client business and inviting clie=
+nts to join us on this journey.
+MAKING YOU LOOK SMARTER=20
+     =20
+RAPP REPS AT 3%=20
+
+RAPP US sent Ilana Goetz and Emily Parker to the 3% Conference per their aw=
+ard-winning D&I submissions. In Ilana's words:=20
+
+3% was a two-day conference for people of all colors, sizes, backgrounds, b=
+eliefs, religions, etc., to come together and connect on one mission =E2=80=94 gen=
+der equality. The mission of this year's 3% Conference was to have men repre=
+sent 29% attendance, as well as  to figure out how to get more men involved =
+in the fight for gender equality. Contrary to my original belief, I learned =
+that it is NOT a women's conference, it is a business conference to discuss =
+diversity, inclusion and gender equality, and we cannot do that  without men=
+ in the conversation.=20
+
+One of my main takeaways was seeing how organizations can be more successfu=
+l if their leaders adopt a more empathetic mindset =E2=80=94 the term for this is =
+"operationalizing" empathy, causing your people to feel heard and cared for,=
+ therefore creating an environment  of trust.=20
+
+I also saw the power of unapologetically moving forward from a CEO undergoi=
+ng chemo and hearing about what she took away from the experience and hospit=
+al staff. She left with a new outlook on the importance of working through a=
+ problem instead of dwelling =E2=80=94  there should be no egos, constant collabor=
+ation and no one is perfect =E2=80=94 so even if there isn't an answer we should a=
+lways take a moment to give those around us a compliment.=20
+
+Reach out to Ilana to learn more!=20
+WHAT'S NEW=20
+     =20
+RAPP  DUBAI TEAMS UP WITH METLIFE FOR BREAST CANCER AWARENESS MONTH=20
+
+Women are strong protectors. For #BreastCancerAwarenessMonth, this past Oct=
+ober, RAPP Dubai helped MetLife reaffirm its commitment to protecting women =
+through its innovative insurance solutions. Watch George and Marie's hopeful=
+ story to discover how you, with MetLife, can support your family - navigati=
+ng through the difficult times and beating breast  cancer, together. Watch t=
+he film here.=20
+RAPP  WINS AIMMUNE THERAPEUTICS=20
+
+RAPP has been named CRM AOR for biopharma company Aimmune Therapeutics , fo=
+unded to address the unmet medical need to develop approved treatments for f=
+ood allergies. Aimmune is poised to soon deliver the first FDA-approved trea=
+tment for peanut allergies. RAPP will help Aimmune define the patient experi=
+ence,  data strategy, technology enablement and innovation roadmap, as well =
+as drive global integration across Omnicom and other agencies, eventually ex=
+tending to RAPP UK. Look out for new work in market Q1 2020!=20
+AWARDS ACROSS THE BOARD=20
+
+=E2=97=8F RAPP NY was shortlisted for "Best Use of Social" and "Best Branding B2B=
+ Campaign" for its work with AmFam and SAP at the Digiday Awards!=20
+=E2=97=8F RAPP SF is a finalist in the "Best Social Campaign" category for its "W=
+hat Do You See?" Autodesk work at The Drum B2B Awards 2019!=20
+WHAT'S  RAPPENING?=20
+
+=E2=97=8F Our RAPP offices have been celebrating Health Week =E2=80=94 from office yoga=
+, to healthy breakfasts, massages and more =E2=80=94 we hope everyone had a chance=
+ to relax and enjoy!=20
+=E2=97=8F We loved seeing all of your creative costumes this Halloween! Check out=
+ photos from Chicago and Dallas!=20
+DIGITAL  TURNS 25!=20
+
+RAPP's global CMO, Anne Marie Neal, reminisces on how digital began, in hon=
+or of its 25th anniversary! After over two decades of transformation, check =
+out what she, and other marketing execs, were thinking back then - compared =
+to how they feel about digital  now. Read more with MediaPost.=20
+RAPP  IN THE NEWS=20
+
+=E2=97=8F Help us welcome Shari Reichenberg as managing director, RAPP NY!=20
+=E2=97=8F Amy Blasco breaks down the best ways to measure, and profit from, custo=
+mer loyalty.=20
+=E2=97=8F John Wells discusses how the automotive industry is changing and how ma=
+rketers can keep up, with AdForum.=20
+=E2=97=8F RAPP UK's Creative Apprentice, Munira, had an opportunity to meet Princ=
+e William as a part of her apprenticeship journey with RAPP!=20
+=E2=97=8F Mimi Nicklin shares why stories sell, no matter the medium with MarkLiv=
+es.=20
+RAPP is an Omnicom Company.  =C2=A9 2019 RAPP. All rights reserved.=20
+220 East 42nd Street, New York, NY 10017=20
+
+Update  Profile=20
+
+
+--B_3663051715_268333828
+Content-type: text/html;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3.=
+org/1999/xhtml" xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:sc=
+hemas-microsoft-com:office:office"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width">
+<title>See what's happening in the global network this month.</title>
+<style type=3D"text/css">
+        #outlook a {
+            padding: 0;
+            color: inherit;
+        }
+       =20
+        body {
+            width: 100% !important;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        table td { border-collapse: collapse; mso-table-lspace: 0; mso-tabl=
+e-rspace: 0; }
+        table { border-spacing: 0; border-collapse: collapse; mso-table-lsp=
+ace: 0; mso-table-rspace: 0;}
+    =20
+      =20
+    </style>
+</head>
+<body bgcolor=3D"#dadada" style=3D"color:#fff">
+<style type=3D"text/css">
+div.preheader=20
+{ display: none !important; }=20
+</style>
+<div class=3D"preheader" style=3D"font-size: 1px; display: none !important;=
+">See what's happening in the global network this month.</div>
+<div class=3D"preheader" style=3D"display:none;">Things you need to know th=
+is month </div>
+<span style=3D"display:none !important; color:#ffffff; font-size:1px; line-=
+height:0; overflow:hidden; mso-hide:all;">RAPP Monthly newsletter</span>
+<table bgcolor=3D"#dadada" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ width=3D"100%" id=3D"wrappertable" style=3D"table-layout:fixed;" style=3D"=
+border:none; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:co=
+llapse;">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"border:0;padding:0;font-size:0=
+px;line-height:0;">
+<table class=3D"container" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ align=3D"center" bgcolor=3D"ffffff" class=3D"devicewidth" bgcolor=3D"#ffff=
+ff">
+<!-- BEGIN  Header image top -->
+<tbody>
+<tr>
+<td>
+<table class=3D"header" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"700" align=3D"center" class=3D"devicewidth" bgcolor=3D"#ffffff" styl=
+e=3D"mso-cellspacing: 0px; mso-padding-alt: 0px 0px 0px 0px;width:700px; bo=
+rder:none; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:coll=
+apse;">
+<tbody>
+<tr>
+<td colspan=3D"3"><img src=3D"http://image.s4.exct.net/lib/fe8e1574766d027a=
+76/m/1/Newsletterheader.jpg" alt=3D"That's A Rapp">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!-- End  Header image top --><!-- BEGIN Sub Header + first wide section --=
+>
+<tr>
+<td>
+<table class=3D"standard-section" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" width=3D"700" align=3D"center" class=3D"devicewidth" bgcolor=3D"#ff=
+ffff" style=3D"width:700px; border:none; mso-table-lspace:0pt; mso-table-rs=
+pace:0pt; border-collapse:collapse;">
+<tbody>
+<tr>
+<td class=3D"hide" valign=3D"top" width=3D"25" height=3D"70" style=3D"borde=
+r:0;padding:0;font-size:0px;line-height:0;width:25px;height:70px;">
+<img src=3D"http://image.s4.exct.net/lib/fe8e1574766d027a76/m/1/Newsletterl=
+eft.jpg">
+</td>
+<td width=3D"650" align=3D"center" valign=3D"top" bgcolor=3D"#ffffff" style=
+=3D"width:650px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"650" style=
+=3D"width:650px;background-color:#ffffff">
+<tbody>
+<tr>
+<td width=3D"30" style=3D"width:30px;"></td>
+<td align=3D"center">
+<table>
+<tbody>
+<tr>
+<td></td>
+<td height=3D"20" style=3D"height:20px;"></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td height=3D"20px;"><font size=3D"1" style=3D"text-align:center;font-famil=
+y:Arial, sans-serif;color:#000000;font-size:24px;line-height:28px;font-weig=
+ht:bold;letter-spacing:0px;">FIERCE WORK
+</font></td>
+<td></td>
+</tr>
+<tr>
+<td height=3D"4" style=3D"height:4px;line-height:4px;font-size:4px;">&nbsp;=
+ </td>
+<td bgcolor=3D"14A6D1" height=3D"4" style=3D"height:4px;line-height:4px;fon=
+t-size:4px;">
+&nbsp; </td>
+<td height=3D"4" style=3D"height:4px;line-height:4px;font-size:4px;">&nbsp;=
+ </td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"30" style=3D"width:30px;"></td>
+</tr>
+<tr>
+<td colspan=3D"3" width=3D"650" height=3D"228" style=3D"width:650px;height:=
+252px;"><img src=3D"https://image.s4.sfmc-content.com/lib/fe9a1570736507797=
+3/m/5/2bed2f51-5bbe-4926-8dad-9c097daaf45e.png">
+</td>
+</tr>
+<tr>
+<td colspan=3D"3" width=3D"650" style=3D"width:650px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"650" style=
+=3D"width:650px;">
+<tbody>
+<tr>
+<td height=3D"5" style=3D"height:5px;"></td>
+</tr>
+<tr>
+<td width=3D"50" style=3D"width:50px;"></td>
+<td width=3D"550" style=3D"width:550px;"><font size=3D"1" style=3D"font-fam=
+ily:Arial, sans-serif;color:#000000;font-size:14px;line-height:15px;font-we=
+ight:normal;letter-spacing:0px;"><span style=3D"font-weight:bold;font-size:=
+18px; line-height:19px;">TOYOTA BRINGS BACK
+ A BELOVED ICON</span> <br>
+<br>
+RAPP LA helped Toyota write its next chapter in the story of the classic Su=
+pra, a darling of die-hard gearheads across the country. Supra's reappearan=
+ce, after an absence of almost 20 years, has brought general excitement to =
+a fever&nbsp;pitch.
+<br>
+<br>
+Using advanced modeling techniques to inform prioritized targeting strategi=
+es, a distinct tone of voice and design aesthetic were created for each aud=
+ience. To cut through the clutter, we used a combination of standout direct=
+ mail that featured a custom-printed
+ microfiber dashboard dusting cloth (gearheads will understand why) and a l=
+imited-edition blueprint poster of the new Supra in all its stunning, athle=
+tic and sensuous glory. This was underpinned by a long-scroll, parallax
+<a style=3D"font-weight:bold;color:#14A6D1;text-decoration:underline;" href=
+=3D"https://urldefense.proofpoint.com/v2/url?u=3Dhttps-3A__cl.s4.exct.net_-=
+3Fqs-3D3c8c9f1ae3498d3fb95a0e0561ca259875e57c970bdf76be1a83c0a2ed1ce4c1c64d=
+b9115b82d56f71d46aa7f4c4467772935448b87b3705&amp;d=3DDwMCAg&amp;c=3D9wxE0Dg=
+WbPxd1HCzjwN8Eaww1--ViDajIU4RXCxgSXE&amp;r=3De0r5N5nTxtWQ9ighrIAHLmHimCsQUl=
+RiTZR-htO3_Xw&amp;m=3DdrkZWsKWxMFi2wTbsBAymsgKrN-0nrj6Y-rKyN-Yw8g&amp;s=3Dx=
+DJAXDlOkro1-3IWNXipjUIP4WbBzWPmeiMgJZ9OIjs&amp;e=3D" target=3D"_blank">
+landing page</a>, where enthusiasts could get an insider's look at everythi=
+ng that makes the new GR Supra a legend reborn to be&nbsp;driven.
+<br>
+<br>
+</font></td>
+<td width=3D"50" style=3D"width:50px;"></td>
+</tr>
+<tr>
+<td height=3D"5" style=3D"height:5px;"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td class=3D"hide" valign=3D"top" width=3D"25" height=3D"70" style=3D"borde=
+r:0;padding:0;font-size:0px;line-height:0; width:25px; height:70px;">
+<img src=3D"http://image.s4.exct.net/lib/fe8e1574766d027a76/m/1/Newsletterr=
+ight.jpg">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!-- END Sub Header + first wide section --><!-- BEGIN Wide section -->
+<tr>
+<td>
+<table class=3D"standard-section" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" width=3D"700" align=3D"center" class=3D"devicewidth" bgcolor=3D"#ff=
+ffff">
+<tbody>
+<tr>
+<td class=3D"hide margin" valign=3D"top" width=3D"25" style=3D"border:0;pad=
+ding:0;font-size:0px;line-height:0; width:25px;">
+</td>
+<td class=3D"main-section" width=3D"650" align=3D"center" valign=3D"top" bg=
+color=3D"#ffffff" style=3D"width:650px;border:0;padding:0;font-size:0px;lin=
+e-height:0;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"650" style=
+=3D"width:650px;background-color:#ffffff">
+<tbody>
+<tr>
+<td width=3D"30" style=3D"width:30px;"></td>
+<td align=3D"center">
+<table>
+<tbody>
+<tr>
+<td></td>
+<td height=3D"10" style=3D"height:10px;"></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td height=3D"20px;"><font size=3D"1" style=3D"text-align:center;font-famil=
+y:Arial, sans-serif;color:#000000;font-size:24px;line-height:28px;font-weig=
+ht:bold;letter-spacing:0px;">ALL THINGS BUSINESS
+</font></td>
+<td></td>
+</tr>
+<tr>
+<td height=3D"4" style=3D"height:4px;line-height:4px;font-size:4px;">&nbsp;=
+ </td>
+<td bgcolor=3D"14A6D1" height=3D"4" style=3D"height:4px;line-height:4px;fon=
+t-size:4px;">
+&nbsp; </td>
+<td height=3D"4" style=3D"height:4px;line-height:4px;font-size:4px;">&nbsp;=
+ </td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"30" style=3D"width:30px;"></td>
+</tr>
+<tr>
+<td colspan=3D"3" width=3D"650" height=3D"228" style=3D"width:650px;height:=
+252px;"><img src=3D"https://image.s4.sfmc-content.com/lib/fe9a1570736507797=
+3/m/5/a8a08c6b-d10c-4fba-8005-5472dbfe1fe3.jpg">
+</td>
+</tr>
+<tr>
+<td colspan=3D"3" width=3D"650" style=3D"width:650px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"650" style=
+=3D"width:650px;">
+<tbody>
+<tr>
+<td height=3D"5" style=3D"height:5px;"></td>
+</tr>
+<tr>
+<td width=3D"50" style=3D"width:50px;"></td>
+<td width=3D"550" style=3D"width:550px;"><font size=3D"1" style=3D"font-fam=
+ily:Arial, sans-serif;color:#000000;font-size:14px;line-height:15px;font-we=
+ight:normal;letter-spacing:0px;"><span style=3D"font-weight:bold;font-size:=
+18px; line-height:19px;">RAPP COMMITS TO THE
+ VALUABLE 500</span> <br>
+<br>
+As part of our global initiative to place diversity and inclusion at the fo=
+refront of what we do not only for clients, but for our people and local co=
+mmunities as well, RAPP Worldwide has pledged a commitment to
+<a style=3D"font-weight:bold;color:#14A6D1;text-decoration:underline;" href=
+=3D"https://urldefense.proofpoint.com/v2/url?u=3Dhttps-3A__cl.s4.exct.net_-=
+3Fqs-3D3c8c9f1ae3498d3f7b738a1f4a36cf10c09baec830146571d3ddfe3c4f465ed08c33=
+4ac87f6f98d75c2dd82cae1fb627646aebc1f7e803d9&amp;d=3DDwMCAg&amp;c=3D9wxE0Dg=
+WbPxd1HCzjwN8Eaww1--ViDajIU4RXCxgSXE&amp;r=3De0r5N5nTxtWQ9ighrIAHLmHimCsQUl=
+RiTZR-htO3_Xw&amp;m=3DdrkZWsKWxMFi2wTbsBAymsgKrN-0nrj6Y-rKyN-Yw8g&amp;s=3DR=
+WWu_B-UVkjcPDVLNgGlNYNe0Lrg9fRmqD1Bxd9xzjU&amp;e=3D" target=3D"_blank">
+The Valuable 500</a> =E2=80=94 an organization working to put disability on=
+ the business leadership&nbsp;agenda.
+<br>
+<br>
+As part of this partnership, RAPP has committed&nbsp;to:
+<ol>
+<li>Ensuring our agency continues to develop our fearless and inclusive cul=
+ture and talent by welcoming, embracing and empowering everyone, including =
+those with disabilities, and embracing all of their unique abilities as to =
+inspire the best in our people and
+ our&nbsp;work.</li><li>Advancing our organization's culture, training and =
+priorities so that our policies, practices and programs support and value p=
+eople's differences and intersectionalities so people have the understandin=
+g, respect and freedom to express their points of view,
+ be provocative with new thinking and collaborate for&nbsp;innovation.</li>=
+<li>Standing up for individuality and proudly sharing stories about what pe=
+ople are able to do here because they can bring their full selves to work =
+=E2=80=94 and are supported with flexibility, brilliant colleagues, and the=
+ ability to do great work that benefits our
+ agency and client business and inviting clients to join us on this&nbsp;jo=
+urney.</li></ol>
+<br>
+<br>
+</font></td>
+<td width=3D"50" style=3D"width:50px;"></td>
+</tr>
+<tr>
+<td height=3D"5" style=3D"height:5px;"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table class=3D"standard-section" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" width=3D"700" align=3D"center" class=3D"devicewidth" bgcolor=3D"#ff=
+ffff">
+<tbody>
+<tr>
+<td class=3D"hide margin" valign=3D"top" width=3D"25" style=3D"border:0;pad=
+ding:0;font-size:0px;line-height:0; width:25px;">
+</td>
+<td class=3D"main-section" width=3D"650" align=3D"center" valign=3D"top" bg=
+color=3D"#ffffff" style=3D"width:650px;border:0;padding:0;font-size:0px;lin=
+e-height:0;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"650" style=
+=3D"width:650px;background-color:#ffffff">
+<tbody>
+<tr>
+<td width=3D"30" style=3D"width:30px;"></td>
+<td align=3D"center">
+<table>
+<tbody>
+<tr>
+<td></td>
+<td height=3D"10" style=3D"height:10px;"></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td height=3D"20px;"><font size=3D"1" style=3D"text-align:center;font-famil=
+y:Arial, sans-serif;color:#000000;font-size:24px;line-height:28px;font-weig=
+ht:bold;letter-spacing:0px;">MAKING YOU LOOK SMARTER
+</font></td>
+<td></td>
+</tr>
+<tr>
+<td height=3D"4" style=3D"height:4px;line-height:4px;font-size:4px;">&nbsp;=
+ </td>
+<td bgcolor=3D"14A6D1" height=3D"4" style=3D"height:4px;line-height:4px;fon=
+t-size:4px;">
+&nbsp; </td>
+<td height=3D"4" style=3D"height:4px;line-height:4px;font-size:4px;">&nbsp;=
+ </td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"30" style=3D"width:30px;"></td>
+</tr>
+<tr>
+<td colspan=3D"3" width=3D"650" height=3D"228" style=3D"width:650px;height:=
+252px;"><img src=3D"https://image.s4.sfmc-content.com/lib/fe9a1570736507797=
+3/m/5/1fb58b5e-c658-4ce9-9faa-695b7018a980.jpg">
+</td>
+</tr>
+<tr>
+<td colspan=3D"3" width=3D"650" style=3D"width:650px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"650" style=
+=3D"width:650px;">
+<tbody>
+<tr>
+<td height=3D"5" style=3D"height:5px;"></td>
+</tr>
+<tr>
+<td width=3D"50" style=3D"width:50px;"></td>
+<td width=3D"550" style=3D"width:550px;"><font size=3D"1" style=3D"font-fam=
+ily:Arial, sans-serif;color:#000000;font-size:14px;line-height:15px;font-we=
+ight:normal;letter-spacing:0px;"><span style=3D"font-weight:bold;font-size:=
+18px; line-height:19px;">RAPP REPS AT 3%</span>
+<br>
+<br>
+RAPP US sent Ilana Goetz and Emily Parker to the 3% Conference per their aw=
+ard-winning D&amp;I submissions. In Ilana's&nbsp;words:
+<br>
+<br>
+3% was a two-day conference for people of all colors, sizes, backgrounds, b=
+eliefs, religions, etc., to come together and connect on one mission =E2=80=
+=94 gender equality. The mission of this year's 3% Conference was to have m=
+en represent 29% attendance, as well as
+ to figure out how to get more men involved in the fight for gender equalit=
+y. Contrary to my original belief, I learned that it is NOT a women's confe=
+rence, it is a business conference to discuss diversity, inclusion and gend=
+er equality, and we cannot do that
+ without men in the&nbsp;conversation. <br>
+<br>
+One of my main takeaways was seeing how organizations can be more successfu=
+l if their leaders adopt a more empathetic mindset =E2=80=94 the term for t=
+his is &quot;operationalizing&quot; empathy, causing your people to feel he=
+ard and cared for, therefore creating an environment
+ of&nbsp;trust. <br>
+<br>
+I also saw the power of unapologetically moving forward from a CEO undergoi=
+ng chemo and hearing about what she took away from the experience and hospi=
+tal staff. She left with a new outlook on the importance of working through=
+ a problem instead of dwelling =E2=80=94
+ there should be no egos, constant collaboration and no one is perfect =E2=
+=80=94 so even if there isn't an answer we should always take a moment to g=
+ive those around us a&nbsp;compliment.
+<br>
+<br>
+Reach out to <a style=3D"font-weight:bold;color:#14A6D1;text-decoration:und=
+erline;" href=3D"mailto:illan.goetz@rapp.com">
+Ilana</a> to learn more! </font></td>
+<td width=3D"50" style=3D"width:50px;"></td>
+</tr>
+<tr>
+<td height=3D"5" style=3D"height:5px;"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table class=3D"standard-section" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" width=3D"700" align=3D"center" class=3D"devicewidth" bgcolor=3D"#ff=
+ffff">
+<tbody>
+<tr>
+<td class=3D"hide margin" valign=3D"top" width=3D"25" style=3D"border:0;pad=
+ding:0;font-size:0px;line-height:0; width:25px;">
+</td>
+<td class=3D"main-section" width=3D"650" align=3D"center" valign=3D"top" bg=
+color=3D"#ffffff" style=3D"width:650px;border:0;padding:0;font-size:0px;lin=
+e-height:0;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"650" style=
+=3D"width:650px;background-color:#ffffff">
+<tbody>
+<tr>
+<td width=3D"30" style=3D"width:30px;"></td>
+<td align=3D"center">
+<table>
+<tbody>
+<tr>
+<td></td>
+<td height=3D"10" style=3D"height:10px;"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table class=3D"standard-section" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" width=3D"700" align=3D"center" class=3D"devicewidth" bgcolor=3D"#ff=
+ffff">
+<tbody>
+<tr>
+<td class=3D"hide margin" valign=3D"top" width=3D"25" style=3D"border:0;pad=
+ding:0;font-size:0px;line-height:0; width:25px;">
+</td>
+<td class=3D"main-section" width=3D"650" align=3D"center" valign=3D"top" bg=
+color=3D"#ffffff" style=3D"width:650px;border:0;padding:0;font-size:0px;lin=
+e-height:0;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"650" style=
+=3D"width:650px;background-color:#ffffff">
+<tbody>
+<tr>
+<td width=3D"30" style=3D"width:30px;"></td>
+<td align=3D"center">
+<table>
+<tbody>
+<tr>
+<td></td>
+<td height=3D"10" style=3D"height:10px;"></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td height=3D"20px;"><font size=3D"1" style=3D"text-align:center;font-famil=
+y:Arial, sans-serif;color:#000000;font-size:24px;line-height:28px;font-weig=
+ht:bold;letter-spacing:0px;">WHAT'S NEW
+</font></td>
+<td></td>
+</tr>
+<tr>
+<td height=3D"4" style=3D"height:4px;line-height:4px;font-size:4px;">&nbsp;=
+ </td>
+<td bgcolor=3D"14A6D1" height=3D"4" style=3D"height:4px;line-height:4px;fon=
+t-size:4px;">
+&nbsp; </td>
+<td height=3D"4" style=3D"height:4px;line-height:4px;font-size:4px;">&nbsp;=
+ </td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"30" style=3D"width:30px;"></td>
+</tr>
+</tbody>
+</table>
+</td>
+<td class=3D"hide margin" valign=3D"top" width=3D"25" style=3D"border:0;pad=
+ding:0;font-size:0px;line-height:0; width:25px;">
+</td>
+</tr>
+<tr>
+<td colspan=3D"5" valign=3D"top" height=3D"12" style=3D"border:0;padding:0;=
+font-size:0px;line-height:0; height:15px;">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!-- END Wide section --><!-- BEGIN alternating section -->
+<tr>
+<td>
+<table class=3D"standard-section" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" width=3D"700" align=3D"center" class=3D"devicewidth" bgcolor=3D"#ff=
+ffff">
+<tbody>
+<tr>
+<td class=3D"hide margin" valign=3D"top" width=3D"25" style=3D"border:0;pad=
+ding:0;font-size:0px;line-height:0; width:25px;">
+</td>
+<td class=3D"main-section" width=3D"650" align=3D"center" valign=3D"top" bg=
+color=3D"#ffffff" style=3D"width:650px;border:0;padding:0;font-size:0px;lin=
+e-height:0;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-spa=
+cing: 0px;border:none; mso-table-lspace:0pt; mso-table-rspace:0pt; border-c=
+ollapse:collapse; margin:0;">
+<tbody>
+<tr>
+<td align=3D"left" valign=3D"top" id=3D"containercell" style=3D"border:0;pa=
+dding:0;font-size:0px;line-height:0;width:650px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"650" style=
+=3D"background-color:#ffffff;border-spacing: 0px;border:none; mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt; border-collapse:collapse;margin:0;">
+<tbody>
+<tr>
+<td width=3D"650" style=3D"border:0;padding:0;font-size:0px;line-height:0;w=
+idth:650px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"650" style=
+=3D"background-color:#ffffff;border-spacing: 0px;border:none; mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt; border-collapse:collapse;">
+<tbody>
+<tr>
+<td width=3D"325" height=3D"252" style=3D"width:325px;height:252px;border:0=
+;padding:0;font-size:0px;line-height:0;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"325" style=
+=3D"width:325px;background-color:#ffffff;border-spacing: 0px;border:none; m=
+so-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse;">
+<tbody>
+<tr>
+<td width=3D"25" style=3D"width:25px;"></td>
+<td width=3D"275" valign=3D"middle" style=3D"width:275px;"><font size=3D"1"=
+ style=3D"font-family:Arial, sans-serif;color:#000000;font-size:12px;line-h=
+eight:13px;font-weight:normal;letter-spacing:0px;"><span style=3D"font-weig=
+ht:bold;font-size:16px;line-height:17px;">RAPP
+ DUBAI TEAMS UP WITH METLIFE FOR BREAST CANCER AWARENESS&nbsp;MONTH</span> =
+<br>
+<br>
+Women are strong protectors. For #BreastCancerAwarenessMonth, this past Oct=
+ober, RAPP Dubai helped
+<a style=3D"font-weight:bold;color:#14A6D1;text-decoration:underline;" href=
+=3D"https://urldefense.proofpoint.com/v2/url?u=3Dhttps-3A__cl.s4.exct.net_-=
+3Fqs-3D3c8c9f1ae3498d3fd8193d7afe4fc8c0a99ac1091ed18ea4e75bbce9476a5b9add42=
+2557a2a69ecc5d720030910818e89e5bb4d65e31b359&amp;d=3DDwMCAg&amp;c=3D9wxE0Dg=
+WbPxd1HCzjwN8Eaww1--ViDajIU4RXCxgSXE&amp;r=3De0r5N5nTxtWQ9ighrIAHLmHimCsQUl=
+RiTZR-htO3_Xw&amp;m=3DdrkZWsKWxMFi2wTbsBAymsgKrN-0nrj6Y-rKyN-Yw8g&amp;s=3Dq=
+We8JP5KoH9fgKgGcK45Z47XeTVyKA3aOh-WsAD0E5k&amp;e=3D" target=3D"_blank">
+MetLife</a> reaffirm its commitment to protecting women through its innovat=
+ive insurance solutions. Watch George and Marie's hopeful story to discover=
+ how you, with MetLife, can support your family - navigating through the di=
+fficult times and beating breast
+ cancer, together. <a style=3D"font-weight:bold;color:#14A6D1;text-decorati=
+on:underline;" href=3D"https://urldefense.proofpoint.com/v2/url?u=3Dhttps-3=
+A__cl.s4.exct.net_-3Fqs-3D3c8c9f1ae3498d3fb2a578821d07867737579b631998fa749=
+e5cba9d6b53bd706391f026c26227a32b3c4653e0e8a0ed0bbadeb2e44c7fac&amp;d=3DDwM=
+CAg&amp;c=3D9wxE0DgWbPxd1HCzjwN8Eaww1--ViDajIU4RXCxgSXE&amp;r=3De0r5N5nTxtW=
+Q9ighrIAHLmHimCsQUlRiTZR-htO3_Xw&amp;m=3DdrkZWsKWxMFi2wTbsBAymsgKrN-0nrj6Y-=
+rKyN-Yw8g&amp;s=3DpF5-4At3FXspp3hqXm6Ko1Bhom1qq6ADqIhxapnjbfY&amp;e=3D" tar=
+get=3D"_blank">
+Watch the film&nbsp;here</a>. </font></td>
+<td width=3D"25" style=3D"width:25px;"></td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"325" height=3D"252" style=3D"width:325px;height:252px;border:0=
+;padding:0;font-size:0px;line-height:0;">
+<img src=3D"https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/a8=
+149e9e-6cce-44b6-9d9c-3f2e21dc5ca6.png">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td width=3D"650" style=3D"border:0;padding:0;font-size:0px;line-height:0;w=
+idth:650px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"650" style=
+=3D"background-color:#ffffff;border-spacing: 0px;border:none; mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt; border-collapse:collapse;">
+<tbody>
+<tr>
+<td width=3D"325" height=3D"252" style=3D"width:325px;height:252px;border:0=
+;padding:0;font-size:0px;line-height:0;">
+<img src=3D"https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/72=
+e34487-acc5-4a4e-80d0-7316695b3628.png">
+</td>
+<td width=3D"325" height=3D"252" style=3D"width:325px;height:252px;border:0=
+;padding:0;font-size:0px;line-height:0;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"325" style=
+=3D"width:325px;background-color:#ffffff;border-spacing: 0px;border:none; m=
+so-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse;">
+<tbody>
+<tr>
+<td width=3D"25" style=3D"width:25px;"></td>
+<td width=3D"275" valign=3D"middle" style=3D"width:275px;"><font size=3D"1"=
+ style=3D"font-family:Arial, sans-serif;color:#000000;font-size:12px;line-h=
+eight:13px;font-weight:normal;letter-spacing:0px;"><span style=3D"font-weig=
+ht:bold;font-size:16px;line-height:17px;">RAPP
+ WINS AIMMUNE THERAPEUTICS</span> <br>
+<br>
+RAPP has been named CRM AOR for biopharma company <a style=3D"font-weight:b=
+old;color:#14A6D1;text-decoration:underline;display:inline-block;" href=3D"=
+https://urldefense.proofpoint.com/v2/url?u=3Dhttps-3A__cl.s4.exct.net_-3Fqs=
+-3D3c8c9f1ae3498d3f4edfd2d05c1ee17af5f5cc20f3cf261aa661bc53c941c1f9e1755beb=
+7f2f9df5492216d6e39d08476888aa2cd7722656&amp;d=3DDwMCAg&amp;c=3D9wxE0DgWbPx=
+d1HCzjwN8Eaww1--ViDajIU4RXCxgSXE&amp;r=3De0r5N5nTxtWQ9ighrIAHLmHimCsQUlRiTZ=
+R-htO3_Xw&amp;m=3DdrkZWsKWxMFi2wTbsBAymsgKrN-0nrj6Y-rKyN-Yw8g&amp;s=3D6-rRh=
+afyYxNd7pJbIKtL-gOhx8FXAm_YX2MZJhMSus0&amp;e=3D" target=3D"_blank">
+Aimmune Therapeutics </a>, founded to address the unmet medical need to dev=
+elop approved treatments for food allergies. Aimmune is poised to soon deli=
+ver the first FDA-approved treatment for peanut allergies. RAPP will help A=
+immune define the patient experience,
+ data strategy, technology enablement and innovation roadmap, as well as dr=
+ive global integration across Omnicom and other agencies, eventually extend=
+ing to RAPP UK. Look out for new work in market Q1&nbsp;2020!
+</font></td>
+<td width=3D"25" style=3D"width:25px;"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td width=3D"650" style=3D"border:0;padding:0;font-size:0px;line-height:0;w=
+idth:650px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"650" style=
+=3D"background-color:#ffffff;border-spacing: 0px;border:none; mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt; border-collapse:collapse;">
+<tbody>
+<tr>
+<td width=3D"325" height=3D"252" style=3D"width:325px;height:252px;border:0=
+;padding:0;font-size:0px;line-height:0;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"325" style=
+=3D"width:325px;background-color:#ffffff;border-spacing: 0px;border:none; m=
+so-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse;">
+<tbody>
+<tr>
+<td width=3D"25" style=3D"width:25px;"></td>
+<td width=3D"275" valign=3D"middle" style=3D"width:275px;"><font size=3D"1"=
+ style=3D"font-family:Arial, sans-serif;color:#000000;font-size:12px;line-h=
+eight:13px;font-weight:normal;letter-spacing:0px;"><span style=3D"font-weig=
+ht:bold;font-size:16px;">AWARDS ACROSS THE BOARD</span>
+<br>
+<br>
+=E2=97=8F RAPP NY was shortlisted for &quot;Best Use of Social&quot; and &q=
+uot;Best Branding B2B Campaign&quot; for its work with AmFam and SAP at the=
+ Digiday&nbsp;Awards!
+<br>
+=E2=97=8F RAPP SF is a finalist in the &quot;Best Social Campaign&quot; cat=
+egory for its &quot;What Do You See?&quot; Autodesk work at The Drum B2B Aw=
+ards&nbsp;2019!
+<br>
+</font></td>
+<td width=3D"25" style=3D"width:25px;"></td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"325" height=3D"252" style=3D"width:325px;height:252px;border:0=
+;padding:0;font-size:0px;line-height:0;">
+<img src=3D"http://image.s4.exct.net/lib/fe9a15707365077973/m/4/09d1d4c5-ae=
+66-4293-bc1a-a489872c7d48.jpg">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td width=3D"650" style=3D"border:0;padding:0;font-size:0px;line-height:0;w=
+idth:650px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"650" style=
+=3D"background-color:#ffffff;border-spacing: 0px;border:none; mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt; border-collapse:collapse;">
+<tbody>
+<tr>
+<td width=3D"325" height=3D"252" style=3D"width:325px;height:252px;border:0=
+;padding:0;font-size:0px;line-height:0;">
+<img src=3D"https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/7d=
+102e3d-f004-47a9-bf1f-7769c75422a6.png">
+</td>
+<td width=3D"325" height=3D"252" style=3D"width:325px;height:252px;border:0=
+;padding:0;font-size:0px;line-height:0;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"325" style=
+=3D"width:325px;background-color:#ffffff;border-spacing: 0px;border:none; m=
+so-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse;">
+<tbody>
+<tr>
+<td width=3D"25" style=3D"width:25px;"></td>
+<td width=3D"275" valign=3D"middle" style=3D"width:275px;"><font size=3D"1"=
+ style=3D"font-family:Arial, sans-serif;color:#000000;font-size:12px;line-h=
+eight:13px;font-weight:normal;letter-spacing:0px;"><span style=3D"font-weig=
+ht:bold;font-size:16px;line-height:17px;">WHAT'S
+ RAPPENING?</span> <br>
+<br>
+=E2=97=8F Our RAPP offices have been celebrating Health Week =E2=80=94 from=
+ office yoga, to healthy breakfasts, massages and more =E2=80=94 we hope ev=
+eryone had a chance to relax and&nbsp;enjoy!
+<br>
+=E2=97=8F We loved seeing all of your creative costumes this Halloween! Che=
+ck out photos from
+<a style=3D"font-weight:bold;color:#14A6D1;text-decoration:underline;" href=
+=3D"https://urldefense.proofpoint.com/v2/url?u=3Dhttps-3A__cl.s4.exct.net_-=
+3Fqs-3D3c8c9f1ae3498d3f259009f53a51653a25d963d7b4613df0b2f2698ebfd19a5b95cc=
+1f35b3921493bd91177cceae39e39bb62ae505de9299&amp;d=3DDwMCAg&amp;c=3D9wxE0Dg=
+WbPxd1HCzjwN8Eaww1--ViDajIU4RXCxgSXE&amp;r=3De0r5N5nTxtWQ9ighrIAHLmHimCsQUl=
+RiTZR-htO3_Xw&amp;m=3DdrkZWsKWxMFi2wTbsBAymsgKrN-0nrj6Y-rKyN-Yw8g&amp;s=3DH=
+G2rN5cJTPL0jKDY1GpMMyk258SMAYbX3FidiMI8v08&amp;e=3D" target=3D"_blank">
+Chicago</a> and <a style=3D"font-weight:bold;color:#14A6D1;text-decoration:=
+underline;" href=3D"https://urldefense.proofpoint.com/v2/url?u=3Dhttps-3A__=
+cl.s4.exct.net_-3Fqs-3D3c8c9f1ae3498d3f8916ea572412257234654d8e9d4518157c04=
+6eaff536e162639c4d3af58dafd2f1795173be9eabb751c36c39b49f9814&amp;d=3DDwMCAg=
+&amp;c=3D9wxE0DgWbPxd1HCzjwN8Eaww1--ViDajIU4RXCxgSXE&amp;r=3De0r5N5nTxtWQ9i=
+ghrIAHLmHimCsQUlRiTZR-htO3_Xw&amp;m=3DdrkZWsKWxMFi2wTbsBAymsgKrN-0nrj6Y-rKy=
+N-Yw8g&amp;s=3D8_QMwH6vbupRsPw_vbOZ_N89OfmuNw88yKzws8L4PCg&amp;e=3D" target=
+=3D"_blank">
+Dallas</a>! </font></td>
+<td width=3D"25" style=3D"width:25px;"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td width=3D"650" style=3D"border:0;padding:0;font-size:0px;line-height:0;w=
+idth:650px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"650" style=
+=3D"background-color:#ffffff;border-spacing: 0px;border:none; mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt; border-collapse:collapse;">
+<tbody>
+<tr>
+<td width=3D"325" height=3D"252" style=3D"width:325px;height:252px;border:0=
+;padding:0;font-size:0px;line-height:0;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"325" style=
+=3D"width:325px;background-color:#ffffff;border-spacing: 0px;border:none; m=
+so-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse;">
+<tbody>
+<tr>
+<td width=3D"25" style=3D"width:25px;"></td>
+<td width=3D"275" valign=3D"middle" style=3D"width:275px;"><font size=3D"1"=
+ style=3D"font-family:Arial, sans-serif;color:#000000;font-size:12px;line-h=
+eight:13px;font-weight:normal;letter-spacing:0px;"><span style=3D"font-weig=
+ht:bold;font-size:16px;line-height:17px;">DIGITAL
+ TURNS 25!</span> <br>
+<br>
+RAPP's global CMO, Anne Marie Neal, reminisces on how digital began, in hon=
+or of its 25th anniversary! After over two decades of transformation, check=
+ out what she, and other marketing execs, were thinking back then - compare=
+d to how they feel about digital
+ now. Read more with <a style=3D"font-weight:bold;color:#14A6D1;text-decora=
+tion:underline;" href=3D"https://urldefense.proofpoint.com/v2/url?u=3Dhttps=
+-3A__cl.s4.exct.net_-3Fqs-3D3c8c9f1ae3498d3fecb52bead7a25e2ea3405af0c239f54=
+a5e8d64f167a321b1c9302a2112c7ac70a0ad77a80a29ce1618be609f3b67fcc7&amp;d=3DD=
+wMCAg&amp;c=3D9wxE0DgWbPxd1HCzjwN8Eaww1--ViDajIU4RXCxgSXE&amp;r=3De0r5N5nTx=
+tWQ9ighrIAHLmHimCsQUlRiTZR-htO3_Xw&amp;m=3DdrkZWsKWxMFi2wTbsBAymsgKrN-0nrj6=
+Y-rKyN-Yw8g&amp;s=3DoG86dBv46P7-sYmfgUkVt5BV2dwxRVlT4hkQbV4nNIk&amp;e=3D" t=
+arget=3D"_blank">
+MediaPost</a>. </font></td>
+<td width=3D"25" style=3D"width:25px;"></td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"325" height=3D"252" style=3D"width:325px;height:252px;border:0=
+;padding:0;font-size:0px;line-height:0;">
+<img src=3D"https://image.s4.sfmc-content.com/lib/fe9a15707365077973/m/5/86=
+0a0b55-5d4a-4307-9eaa-f32d94865603.jpg">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td width=3D"650" style=3D"border:0;padding:0;font-size:0px;line-height:0;w=
+idth:650px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"650" style=
+=3D"background-color:#ffffff;border-spacing: 0px;border:none; mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt; border-collapse:collapse;">
+<tbody>
+<tr>
+<td width=3D"325" height=3D"252" style=3D"width:325px;height:252px;border:0=
+;padding:0;font-size:0px;line-height:0;">
+<img src=3D"http://image.s4.exct.net/lib/fe9a15707365077973/m/4/aug_2018_ne=
+ws6.jpg">
+</td>
+<td width=3D"325" height=3D"252" style=3D"width:325px;height:252px;border:0=
+;padding:0;font-size:0px;line-height:0;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"325" style=
+=3D"width:325px;background-color:#ffffff;border-spacing: 0px;border:none; m=
+so-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse;">
+<tbody>
+<tr>
+<td width=3D"25" style=3D"width:25px;"></td>
+<td width=3D"275" valign=3D"middle" style=3D"width:275px;"><font size=3D"1"=
+ style=3D"font-family:Arial, sans-serif;color:#000000;font-size:12px;line-h=
+eight:13px;font-weight:normal;letter-spacing:0px;"><span style=3D"font-weig=
+ht:bold;font-size:16px;line-height:17px;">RAPP
+ IN THE NEWS</span> <br>
+<br>
+=E2=97=8F Help us welcome <a style=3D"font-weight:bold;color:#14A6D1;text-d=
+ecoration:underline;" href=3D"https://urldefense.proofpoint.com/v2/url?u=3D=
+https-3A__cl.s4.exct.net_-3Fqs-3D3c8c9f1ae3498d3fa18d8ceea26fcb685409fff9c2=
+c86bf3bc5bf8740ad433d2d6aa138bbccb1174d1b8b0c4c3de287b6af228018b2b7247&amp;=
+d=3DDwMCAg&amp;c=3D9wxE0DgWbPxd1HCzjwN8Eaww1--ViDajIU4RXCxgSXE&amp;r=3De0r5=
+N5nTxtWQ9ighrIAHLmHimCsQUlRiTZR-htO3_Xw&amp;m=3DdrkZWsKWxMFi2wTbsBAymsgKrN-=
+0nrj6Y-rKyN-Yw8g&amp;s=3DwthMSPSn1xIvF1ZlCYv-yqFQHzEFtO21k1dt2CPr7m0&amp;e=
+=3D" target=3D"_blank">
+Shari Reichenberg</a> as managing director, RAPP&nbsp;NY! <br>
+=E2=97=8F Amy Blasco <a style=3D"font-weight:bold;color:#14A6D1;text-decora=
+tion:underline;" href=3D"https://urldefense.proofpoint.com/v2/url?u=3Dhttps=
+-3A__cl.s4.exct.net_-3Fqs-3D3c8c9f1ae3498d3f24f1c59f1ef184531b06f861e74d0dc=
+6da5abe15573ada4e8e5fb79bb7f2697370f639e68d6a05cba94cf039209ca272&amp;d=3DD=
+wMCAg&amp;c=3D9wxE0DgWbPxd1HCzjwN8Eaww1--ViDajIU4RXCxgSXE&amp;r=3De0r5N5nTx=
+tWQ9ighrIAHLmHimCsQUlRiTZR-htO3_Xw&amp;m=3DdrkZWsKWxMFi2wTbsBAymsgKrN-0nrj6=
+Y-rKyN-Yw8g&amp;s=3DX8zjjcwFGrBbPucVzL58cOyEeAWtmY-EPQIS5bzy7nQ&amp;e=3D" t=
+arget=3D"_blank">
+breaks down</a> the best ways to measure, and profit from, customer&nbsp;lo=
+yalty. <br>
+=E2=97=8F John Wells discusses how the automotive industry is changing and =
+how marketers can keep up, with
+<a style=3D"font-weight:bold;color:#14A6D1;text-decoration:underline;" href=
+=3D"https://urldefense.proofpoint.com/v2/url?u=3Dhttps-3A__cl.s4.exct.net_-=
+3Fqs-3D3c8c9f1ae3498d3fbd82b46a66a68c741bd1048b8952156be3ff0660d7dadf87bd2f=
+6f1553156fa8d8a6ae3161b8fd141bc1ea7af7e13cf3&amp;d=3DDwMCAg&amp;c=3D9wxE0Dg=
+WbPxd1HCzjwN8Eaww1--ViDajIU4RXCxgSXE&amp;r=3De0r5N5nTxtWQ9ighrIAHLmHimCsQUl=
+RiTZR-htO3_Xw&amp;m=3DdrkZWsKWxMFi2wTbsBAymsgKrN-0nrj6Y-rKyN-Yw8g&amp;s=3DW=
+2xEk01bssQLHx1akQAmvn5P7bi8imlzK4DBel-Fv1M&amp;e=3D" target=3D"_blank">
+AdForum</a>. <br>
+=E2=97=8F RAPP UK's Creative Apprentice, Munira, had an opportunity to <a s=
+tyle=3D"font-weight:bold;color:#14A6D1;text-decoration:underline;" href=3D"=
+https://urldefense.proofpoint.com/v2/url?u=3Dhttps-3A__cl.s4.exct.net_-3Fqs=
+-3D3c8c9f1ae3498d3f218a9eebc0486b0cdd3aedbecc31749b43e5d2974f108cb8b23f42e8=
+3068c1f6ef7a9d426895fc684b32eb7bb9b16524&amp;d=3DDwMCAg&amp;c=3D9wxE0DgWbPx=
+d1HCzjwN8Eaww1--ViDajIU4RXCxgSXE&amp;r=3De0r5N5nTxtWQ9ighrIAHLmHimCsQUlRiTZ=
+R-htO3_Xw&amp;m=3DdrkZWsKWxMFi2wTbsBAymsgKrN-0nrj6Y-rKyN-Yw8g&amp;s=3DF_-M2=
+jBndzasozRWF6WycNNlok-MNmalrF9G1NmcZos&amp;e=3D" target=3D"_blank">
+meet Prince William</a> as a part of her apprenticeship journey with&nbsp;R=
+APP! <br>
+=E2=97=8F Mimi Nicklin shares why stories sell, no matter the medium with <=
+a style=3D"font-weight:bold;color:#14A6D1;text-decoration:underline;" href=
+=3D"https://urldefense.proofpoint.com/v2/url?u=3Dhttps-3A__cl.s4.exct.net_-=
+3Fqs-3D3c8c9f1ae3498d3f57b560766e03afcbf666fe4d22c1e8c9b1d49e9268cb0d848bb3=
+b40c0ade45271c1a9c61d686032ac8880ba000309b15&amp;d=3DDwMCAg&amp;c=3D9wxE0Dg=
+WbPxd1HCzjwN8Eaww1--ViDajIU4RXCxgSXE&amp;r=3De0r5N5nTxtWQ9ighrIAHLmHimCsQUl=
+RiTZR-htO3_Xw&amp;m=3DdrkZWsKWxMFi2wTbsBAymsgKrN-0nrj6Y-rKyN-Yw8g&amp;s=3Dp=
+TG8IxeEQ49rzeqMme28DT9xB858X1jzMqOrupki-es&amp;e=3D" target=3D"_blank">
+MarkLives</a>. </font></td>
+<td width=3D"25" style=3D"width:25px;"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"650" style=
+=3D"background-color:#ffffff;border-spacing: 0px;border:none; mso-table-lsp=
+ace:0pt; mso-table-rspace:0pt; border-collapse:collapse;margin:0;">
+<tbody>
+<tr>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td height=3D"20" style=3D"border:0;padding:0;font-size:0px;line-height:0;h=
+eight:20px;">
+</td>
+<td class=3D"hide margin" valign=3D"top" width=3D"25" style=3D"border:0;pad=
+ding:0;font-size:0px;line-height:0;">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!-- END alternating section --><!-- BEGIN Footer social + copyright sectio=
+n -->
+<tr>
+<td>
+<table class=3D"footer" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"700" style=3D"width:700px;border:none; mso-table-lspace:0pt; mso-tab=
+le-rspace:0pt; border-collapse:collapse;">
+<tbody>
+<tr>
+<td width=3D"700" height=3D"20" style=3D"width:700px; height: 20px; border:=
+none;border-collapse:collapse;padding:0;font-size:0;">
+</td>
+</tr>
+<tr>
+<td width=3D"700" style=3D"width:700px; border:none;border-collapse:collaps=
+e;padding:0;font-size:0;">
+<table width=3D"700" style=3D"width:700px;">
+<tbody>
+<tr>
+<td width=3D"304" height=3D"28" style=3D"width:304; height: 28px; border:no=
+ne;border-collapse:collapse;padding:0;font-size:0;">
+</td>
+<td width=3D"28" height=3D"28" style=3D"width:28px; height:28px; border:non=
+e;border-collapse:collapse;padding:0;font-size:0;">
+<a href=3D"https://urldefense.proofpoint.com/v2/url?u=3Dhttps-3A__cl.s4.exc=
+t.net_-3Fqs-3D3c8c9f1ae3498d3f66fb45b998ed983c185e8383036f7f33bed416b4499ff=
+371f2db8450c572958152a717a8e92866873ddaa73db495482c&amp;d=3DDwMCAg&amp;c=3D=
+9wxE0DgWbPxd1HCzjwN8Eaww1--ViDajIU4RXCxgSXE&amp;r=3De0r5N5nTxtWQ9ighrIAHLmH=
+imCsQUlRiTZR-htO3_Xw&amp;m=3DdrkZWsKWxMFi2wTbsBAymsgKrN-0nrj6Y-rKyN-Yw8g&am=
+p;s=3DzdrIvo9WQe852yLryDc1nJYWyyBITTsSG8rMge7060Q&amp;e=3D" title=3D"facebo=
+ok" target=3D"_blank" border=3D"0" style=3D"border:none;padding:0;font-size=
+:0;"><img border=3D"0" style=3D"display:block;" src=3D"https://rappdotcom.b=
+lob.core.windows.net/email/thats-a-rapp/icon-facebook.png">
+</a></td>
+<td width=3D"4" height=3D"28" style=3D"width:4px; height:28px; border:none;=
+border-collapse:collapse;padding:0;font-size:0;">
+</td>
+<td width=3D"28" height=3D"28" style=3D"width:28px; height:28px; border:non=
+e;border-collapse:collapse;padding:0;font-size:0;">
+<a href=3D"https://urldefense.proofpoint.com/v2/url?u=3Dhttps-3A__cl.s4.exc=
+t.net_-3Fqs-3D3c8c9f1ae3498d3f9bf6429a5b2718f42b450c7af3f89830fd3764a59a3f2=
+019305ca41b4ec13dab237e56415ce3e7989e5e5f85fb06af54&amp;d=3DDwMCAg&amp;c=3D=
+9wxE0DgWbPxd1HCzjwN8Eaww1--ViDajIU4RXCxgSXE&amp;r=3De0r5N5nTxtWQ9ighrIAHLmH=
+imCsQUlRiTZR-htO3_Xw&amp;m=3DdrkZWsKWxMFi2wTbsBAymsgKrN-0nrj6Y-rKyN-Yw8g&am=
+p;s=3DTKb8Babgf8CXqRnnAYR81sdxrE8O8Zy7lasTy03mS8A&amp;e=3D" title=3D"Twitte=
+r" target=3D"_blank" border=3D"0" style=3D"border:none;padding:0;font-size:=
+0;"><img border=3D"0" style=3D"display:block;" src=3D"https://rappdotcom.bl=
+ob.core.windows.net/email/thats-a-rapp/icon-twitter.png">
+</a></td>
+<td width=3D"4" height=3D"28" style=3D"width:4px; height:28px; border:none;=
+border-collapse:collapse;padding:0;font-size:0;">
+</td>
+<td width=3D"28" height=3D"28" style=3D"width:28px; height:28px; border:non=
+e;border-collapse:collapse;padding:0;font-size:0;">
+<a href=3D"https://urldefense.proofpoint.com/v2/url?u=3Dhttps-3A__cl.s4.exc=
+t.net_-3Fqs-3D3c8c9f1ae3498d3f0086a14b4671e166eef0eb0091d23add646d08ff15c53=
+0234bd3916793e3e936d984a3fa2d6dd4227e632a2142c5a56e&amp;d=3DDwMCAg&amp;c=3D=
+9wxE0DgWbPxd1HCzjwN8Eaww1--ViDajIU4RXCxgSXE&amp;r=3De0r5N5nTxtWQ9ighrIAHLmH=
+imCsQUlRiTZR-htO3_Xw&amp;m=3DdrkZWsKWxMFi2wTbsBAymsgKrN-0nrj6Y-rKyN-Yw8g&am=
+p;s=3DogJw6zTJ5Jh22n9G2LkSL9NXmBJxQhtaZ3hgpTbpRtk&amp;e=3D" title=3D"Linked=
+In" target=3D"_blank" border=3D"0" style=3D"border:none;padding:0;font-size=
+:0;"><img border=3D"0" style=3D"display:block;" src=3D"https://rappdotcom.b=
+lob.core.windows.net/email/thats-a-rapp/icon-linkedin.png">
+</a></td>
+<td width=3D"304" height=3D"28" style=3D"width:304; height: 28px; border:no=
+ne;border-collapse:collapse;padding:0;font-size:0;">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td width=3D"700" height=3D"10" style=3D"width:700px; height: 10px; border:=
+none;border-collapse:collapse;padding:0;font-size:0;">
+</td>
+</tr>
+<tr>
+<td align=3D"center" height=3D"14" width=3D"700" style=3D"width:334px; heig=
+ht: 14px; border:none;border-collapse:collapse;padding:0;font-size:0;">
+<font size=3D"1" style=3D"text-align:center;font-family: TimesNewRoman, 'Ti=
+mes New Roman', Times, Baskerville, Georgia, sans-serif;color:#000000;font-=
+size:12px;line-height:14px;font-weight:normal;letter-spacing:0px;font-style=
+: italic;">RAPP is an Omnicom Company.
+ =C2=A9&nbsp;2019&nbsp;RAPP.&nbsp;All&nbsp;rights&nbsp;reserved. <br>
+220 East 42nd Street, New York, NY 10017 <br>
+<br>
+<a style=3D"color:#000000;" href=3D"https://urldefense.proofpoint.com/v2/ur=
+l?u=3Dhttp-3A__cl.S4.exct.net_profile-5Fcenter.aspx-3Fqs-3D75cf2b6fe7ee7628=
+80f60bdf374b9f85369f5fbf1d9f637508d6a877bc537baa9410ae8b2c2ca3b995d48228147=
+defc40e2e144f370a9fb6dc0d0122d27c2862f523d1a32922fb19&amp;d=3DDwMCAg&amp;c=
+=3D9wxE0DgWbPxd1HCzjwN8Eaww1--ViDajIU4RXCxgSXE&amp;r=3De0r5N5nTxtWQ9ighrIAH=
+LmHimCsQUlRiTZR-htO3_Xw&amp;m=3DdrkZWsKWxMFi2wTbsBAymsgKrN-0nrj6Y-rKyN-Yw8g=
+&amp;s=3DqB8hjvcyuvVVX6QJwq7piVjIH1sGz0vVPfaTJKdTXLM&amp;e=3D" target=3D"_b=
+lank">Update
+ Profile</a> </font></td>
+</tr>
+<tr>
+<td width=3D"700" height=3D"20" style=3D"width:700px; height: 20px; border:=
+none;border-collapse:collapse;padding:0;font-size:0;">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!-- END Footer social + copyright section -->
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<img src=3D"http://cl.S4.exct.net/open.aspx?ffcb10-fe9411747460037e76-fe1b1=
+c77746c0574721176-fe9a15707365077973-fef1127874620d-fe24157472620775761d72-=
+ffcc17&amp;d=3D40113" width=3D"1" height=3D"1">
+</body>
+</html>
+
+
+--B_3663051715_268333828--

@@ -151,7 +151,7 @@ sftp-config.json
 .vscode/
 
 
-_sources/
-_source/
+# _sources/
+# _source/
 _assets/
 _qa-log/
